@@ -1760,8 +1760,20 @@
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
+  .pt-1 {
+    padding-top: calc(var(--spacing) * 1);
+  }
+  .pr-4 {
+    padding-right: calc(var(--spacing) * 4);
+  }
   .pr-7 {
     padding-right: calc(var(--spacing) * 7);
+  }
+  .pb-1 {
+    padding-bottom: calc(var(--spacing) * 1);
+  }
+  .pl-4 {
+    padding-left: calc(var(--spacing) * 4);
   }
   .text-center {
     text-align: center;
