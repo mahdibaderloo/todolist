@@ -7,7 +7,7 @@ const tasksWrapper = document.getElementById('tasks-wrapper')
 const submitTaskButton = document.getElementById('submit-task')
 
 const taskNameInput = document.getElementById('task-name-input')
-const dateTimeInput = document.getElementById('date-time-input')
+const dateInput = document.getElementById('date-input')
 const descriptionInput = document.getElementById('description-input')
 
 
@@ -50,7 +50,7 @@ function addDataToLocalStorage (tasks) {
 submitTaskButton.addEventListener('click', () => {
     let data = {
         taskName : taskNameInput.value,
-        date : dateTimeInput.value,
+        date : dateInput.value,
         description : descriptionInput.value
     }
 

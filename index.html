@@ -12,7 +12,7 @@
     <!-------------- Header ---------------->
         <header id="header" class="w-full h-36 bg-teal-600 rounded-bl-[104px] flex justify-end">
             <div id="header-content" class="w-3/4 h-full flex justify-around items-center ">
-                <img id="Brand-name" src="Images/TodoList.png" class="">
+                <img id="Brand-name" src="Images/Svg/TodoList.svg" class="">
                 <div id="menu" class="w-12 h-12 flex justify-center items-center bg-(--gray-background) rounded-2xl">
                     <img id="menu-icon" src="Images/Svg/menu.svg" alt="menu">
                 </div>
@@ -150,7 +150,7 @@
     </div>
 
     <!------------- Navbar ------------->
-    <section id="navbar" class="w-full h-20 bg-white shadow-[0px_2px_11.4px_0px_rgba(0,137,123,1)] fixed bottom-0 z-10">
+    <section id="navbar" class="w-full h-20 bg-white shadow-[0px_2px_11.4px_0px_rgba(0,137,123,1)] fixed bottom-0">
     <!--------- Navbar Left  ----------->
         <div id="navbar-left" class="w-1/2 flex items-center"></div>
         <div id="create-task-button" class="w-20 h-20 flex justify-center items-center bg-teal-600 rounded-full shadow-[0px_3px_10px_-4px_rgba(0,0,0,1)] absolute left-0 right-0 mx-auto bottom-10">
@@ -165,22 +165,22 @@
     <section id="task-popup" class="hidden w-full h-full absolute left-0 top-0 bottom-0 z-50 bg-white">
     <!----------- Header Popup ------------->
         <div id="task-popup-header" class="w-full h-32 bg-teal-600 rounded-br-[104px] flex">
-            <div id="header-popup-content" class="w-5/6 h-full flex justify-around items-center">
+            <div id="header-popup-content" class="w-[90%] h-full flex justify-around items-center">
                 <div id="popup-back-button" class="w-12 h-12 flex justify-center items-center bg-(--gray-background) rounded-2xl">
                     <img id="popup-back-icon" src="Images/Svg/arrow-left.svg" alt="back">
                 </div>
-                <img src="Images/CreateNewTask.png" id="popup-title" class="w-60">
+                <img src="Images/Svg/CreateNewTask.svg" id="popup-title" class="w-60">
             </div>
         </div>
     <!------------ Main Popup -------------->
-        <div id="popup-main" class="w-full h-full p-12 bg-white pb-16">
+        <div id="popup-main" class="w-full max-[200vh] p-12 bg-white">
             <div id="task-name-box">
                 <p id="task-name-title" class="text-2xl font-bold">Task name:</p>
                 <input type="text" placeholder="Title" id="task-name-input" class="w-full h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl">
             </div>
-            <div id="date-time-box" class="mt-10">
-                <p id="date-time-title" class="text-2xl font-bold">Date & Time:</p>
-                <input type="text" placeholder="16 April, Friday" id="date-time-input" class="w-full h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl">
+            <div id="date-box" class="mt-10">
+                <p id="date-title" class="text-2xl font-bold">Date:</p>
+                <input type="text" placeholder="16 April, Friday" id="date-input" class="w-full h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl">
             </div>
             <div id="start-end-time-box" class="flex justify-between mt-10">
                 <div id="start-time-box" class="">
@@ -194,7 +194,7 @@
             </div>
             <div id="description-box" class="mt-10">
                 <p id="description-title" class="text-2xl font-bold">Description:</p>
-                <textarea draggable="true" name="" id="description-input" class="w-full h-15 bg pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"></textarea>
+                <textarea draggable="true" maxlength="150" placeholder="150 Characters" name="" id="description-input" class="w-full h-15 bg pl-2.5 pt-0.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"></textarea>
             </div>
             <button id="submit-task" class="w-full h-15 bg-teal-600 flex justify-center items-center text-2xl text-white font-bold shadow-[0_3px_6px_1px_rgba(0,0,0,0.25)] rounded-xl mt-10">Create Task</button>
         </div>
