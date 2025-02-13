@@ -23,3 +23,13 @@ function hideTaskPopup () {
     taskPopup.classList.add('hidden')
 }
 
+
+// Local Storage //
+
+function getLocalStorageData () {
+    return localStorage.getItem('tasks')
+}
+
+function addDataToLocalStorage (data) {
+    localStorage.setItem('tasks', data)
+}
