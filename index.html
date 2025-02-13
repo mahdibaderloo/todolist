@@ -12,7 +12,7 @@
     <!-------------- Header ---------------->
         <header id="header" class="w-full h-36 bg-teal-600 rounded-bl-[104px] flex justify-end">
             <div id="header-content" class="w-3/4 h-full flex justify-around items-center ">
-                <h1 id="Brand-name" class="font-bold text-4xl text-white [text-shadow:_inset_0_4px_4px_rgba(0,0,0,0.25)]">To Do List</h1>
+                <h1 id="Brand-name" class="font-bold text-4xl text-white [text-shadow:inset_0_4px_4px_rgba(0,0,0,0.25)]">To Do List</h1>
                 <div id="menu" class="w-12 h-12 flex justify-center items-center bg-(--gray-background) rounded-2xl">
                     <img id="menu-icon" src="Images/Svg/menu.svg" alt="menu">
                 </div>
@@ -20,9 +20,10 @@
         </header>
     <!---------------- Main ---------------->
     <main id="main" class="w-full h-screen flex flex-col justify-between overflow-hidden">
-        <!--------- Tasks Section ---------->
+    <!----------- Tasks Section ------------>
             <section id="tasks-section" class="w-full h-[90%] px-5 flex flex-col justify-start items-center gap-4 mt-10">
                 <p id="tasks-title" class="text-2xl font-bold w-full ml-7">Tasks</p>
+    <!----------- Tasks Wrapper ------------->
                 <ul id="tasks-wrapper" class="w-full h-full flex flex-col items-center gap-4 overflow-y-scroll mt-3 p-4 pb-24">
                     <li id="task-box" class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1">
                         <div id="done" class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl">
@@ -150,24 +151,28 @@
 
     <!------------- Navbar ------------->
     <section id="navbar" class="w-full h-20 bg-white shadow-[0px_2px_11.4px_0px_rgba(0,137,123,1)] fixed bottom-0 z-10">
+    <!--------- Navbar Left  ----------->
         <div id="navbar-left" class="w-1/2 flex items-center"></div>
         <div id="create-task-button" class="w-20 h-20 flex justify-center items-center bg-teal-600 rounded-full shadow-[0px_3px_10px_-4px_rgba(0,0,0,1)] absolute left-0 right-0 mx-auto bottom-10">
             <img src="Images/Svg/plus.svg" alt="" id="create-task-icon" class="">
         </div>
+    <!--------- Navbar Right ----------->
         <div id="navbar-right" class="w-1/2 flex items-center">
         </div>
     </section>
 
     <!------------- Task Popup ------------->
     <section id="task-popup" class="hidden w-full h-full absolute left-0 top-0 bottom-0 z-50 bg-white">
+    <!----------- Header Popup ------------->
         <div id="task-popup-header" class="w-full h-32 bg-teal-600 rounded-br-[104px] flex">
             <div id="header-popup-content" class="w-5/6 h-full flex justify-around items-center">
                 <div id="popup-back-button" class="w-12 h-12 flex justify-center items-center bg-(--gray-background) rounded-2xl">
                     <img id="popup-back-icon" src="Images/Svg/arrow-left.svg" alt="back">
                 </div>
-                <h1 id="popup-title" class="font-bold text-3xl text-white [text-shadow:_inset_0_4px_4px_rgba(0,0,0,0.25)]">Create New Task</h1>
+                <h1 id="popup-title" class="font-bold text-3xl text-white [text-shadow:inset_0_4px_4px_rgba(0,0,0,0.25)]">Create New Task</h1>
             </div>
         </div>
+    <!------------ Main Popup -------------->
         <div id="popup-main" class="w-full h-full p-12 bg-white pb-16">
             <div id="task-name-box">
                 <p id="task-name-title" class="text-2xl font-bold">Task name:</p>
@@ -189,9 +194,9 @@
             </div>
             <div id="task-name-box" class="mt-10">
                 <p id="task-name-title" class="text-2xl font-bold">Description:</p>
-                <textarea name="" id="task-name-input" class="w-full h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"></textarea>
+                <textarea name="" id="task-name-input" class="w-full h-15 bg pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"></textarea>
             </div>
-            <button id="submit-task" class="w-full h-20 bg-teal-600 flex justify-center items-center text-3xl text-white font-bold shadow-[0_3px_6px_1px_rgba(0,0,0,0.25)] rounded-xl mt-10">Create Task</button>
+            <button id="submit-task" class="w-full h-15 bg-teal-600 flex justify-center items-center text-2xl text-white font-bold shadow-[0_3px_6px_1px_rgba(0,0,0,0.25)] rounded-xl mt-10">Create Task</button>
         </div>
     </section>
 
