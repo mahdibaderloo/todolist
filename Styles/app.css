@@ -729,6 +729,9 @@
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
   .mt-9 {
     margin-top: calc(var(--spacing) * 9);
   }
@@ -1606,6 +1609,9 @@
   }
   .border-\[1px_solid_rgba\(0\,0\,0\,0\.6\)\] {
     border-color: 1px solid rgba(0,0,0,0.6);
+  }
+  .border-\[rgba\(0\,0\,0\,0\.6\)\] {
+    border-color: rgba(0,0,0,0.6);
   }
   .bg-\(--gray-background\) {
     background-color: var(--gray-background);
