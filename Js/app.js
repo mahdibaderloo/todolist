@@ -4,6 +4,11 @@ const createTaskButton = document.getElementById('create-task-button')
 const taskPopup = document.getElementById('task-popup')
 const closePopup = document.getElementById('popup-back-button')
 const tasksWrapper = document.getElementById('tasks-wrapper')
+const submitTaskButton = document.getElementById('submit-task')
+
+const taskNameInput = document.getElementById('task-name-input')
+const dateTimeInput = document.getElementById('date-time-input')
+const descriptionInput = document.getElementById('description-input')
 
 
 // Variables //
@@ -32,15 +37,24 @@ function hideTaskPopup () {
 // Local Storage //
 
 function getLocalStorageData () {
-    return localStorage.getItem()
+    return JSON.parse(localStorage.getItem('tasks'))
 }
 
-function addDataToLocalStorage (data) {
-    localStorage.setItem('tasks', data)
+function addDataToLocalStorage (tasks) {
+    localStorage.setItem('tasks', JSON.stringify(tasks))
 }
 
 
 // Create Task //
+
+submitTaskButton.addEventListener('click', () => {
+    let data = {
+        taskName : taskNameInput.value,
+        date : dateTimeInput.value,
+        description : descriptionInput.value
+    }
+    pushToTasks(data)
+})
 
 function createTask (tasks) {
     tasksWrapper.insertAdjacentHTML('beforeend', `
@@ -57,4 +71,12 @@ function createTask (tasks) {
             </div>
             <img src="Images/Svg/arrow-right.svg" alt="" id="task-setting-icon" class="ml-auto mr-3 w-3">
         </li>`)
+}
+
+
+// Tasks Array //
+
+function pushToTasks (data) {
+    tasks.push(data)
+    addDataToLocalStorage(tasks)
 }
