@@ -12,7 +12,7 @@
     <!-------------- Header ---------------->
         <header id="header" class="w-full h-36 bg-teal-600 rounded-bl-[104px] flex justify-end">
             <div id="header-content" class="w-3/4 h-full flex justify-around items-center ">
-                <h1 id="Brand-name" class="font-bold text-4xl text-white [text-shadow:inset_0_4px_4px_rgba(0,0,0,0.25)]">To Do List</h1>
+                <img id="Brand-name" src="Images/TodoList.png" class="">
                 <div id="menu" class="w-12 h-12 flex justify-center items-center bg-(--gray-background) rounded-2xl">
                     <img id="menu-icon" src="Images/Svg/menu.svg" alt="menu">
                 </div>
@@ -169,7 +169,7 @@
                 <div id="popup-back-button" class="w-12 h-12 flex justify-center items-center bg-(--gray-background) rounded-2xl">
                     <img id="popup-back-icon" src="Images/Svg/arrow-left.svg" alt="back">
                 </div>
-                <h1 id="popup-title" class="font-bold text-3xl text-white [text-shadow:inset_0_4px_4px_rgba(0,0,0,0.25)]">Create New Task</h1>
+                <img src="Images/CreateNewTask.png" id="popup-title" class="w-60">
             </div>
         </div>
     <!------------ Main Popup -------------->
@@ -194,7 +194,7 @@
             </div>
             <div id="description-box" class="mt-10">
                 <p id="description-title" class="text-2xl font-bold">Description:</p>
-                <textarea name="" id="description-input" class="w-full h-15 bg pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"></textarea>
+                <textarea draggable="true" name="" id="description-input" class="w-full h-15 bg pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"></textarea>
             </div>
             <button id="submit-task" class="w-full h-15 bg-teal-600 flex justify-center items-center text-2xl text-white font-bold shadow-[0_3px_6px_1px_rgba(0,0,0,0.25)] rounded-xl mt-10">Create Task</button>
         </div>
