@@ -351,13 +351,28 @@
     <!------------- Navbar ------------->
     <section
       id="navbar"
-      class="w-full h-18 bg-white shadow-[0px_2px_11.4px_0px_rgba(0,137,123,1)] fixed bottom-0"
+      class="w-full h-14 bg-white shadow-[0px_2px_11.4px_0px_rgba(0,137,123,1)] flex justify-between fixed bottom-0"
     >
       <!--------- Navbar Left  ----------->
-      <div id="navbar-left" class="w-1/2 flex items-center"></div>
+      <div
+        id="navbar-left"
+        class="w-1/2 flex items-center justify-center gap-15 pr-15"
+      >
+        <div class="relative">
+          <img
+            src="Images/Svg/notification.svg"
+            alt="notification"
+            id="notification"
+          />
+          <span
+            class="absolute top-0 right-1 bg-red-800 w-1.5 h-1.5 rounded-full"
+          ></span>
+        </div>
+        <img src="Images/Svg/calendar.svg" alt="calendar" id="calendar" />
+      </div>
       <div
         id="create-task-button"
-        class="w-15 h-15 flex justify-center items-center bg-teal-600 rounded-full shadow-[0px_3px_10px_-4px_rgba(0,0,0,1)] absolute left-0 right-0 mx-auto bottom-10"
+        class="w-15 h-15 flex justify-center items-center bg-teal-600 rounded-full shadow-[0px_3px_10px_-4px_rgba(0,0,0,1)] absolute left-0 right-0 mx-auto bottom-7"
       >
         <img
           src="Images/Svg/plus.svg"
@@ -367,7 +382,13 @@
         />
       </div>
       <!--------- Navbar Right ----------->
-      <div id="navbar-right" class="w-1/2 flex items-center"></div>
+      <div
+        id="navbar-right"
+        class="w-1/2 flex items-center justify-center gap-15 pl-15"
+      >
+        <img src="Images/Svg/profile.svg" alt="profile" id="profile" />
+        <img src="Images/Svg/home.svg" alt="home" id="home" />
+      </div>
     </section>
 
     <!------------- Task Popup ------------->
