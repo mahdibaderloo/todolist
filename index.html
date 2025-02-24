@@ -8,7 +8,7 @@
   </head>
   <body>
     <!------------- Container -------------->
-    <div class="container w-full h-screen flex flex-col">
+    <div class="container w-full h-screen flex flex-col overflow-y-hidden">
       <!-------------- Header ---------------->
       <header id="header" class="w-full h-36 bg-teal-600 flex justify-end">
         <div
@@ -33,7 +33,7 @@
           </div>
           <img id="Brand-name" src="Images/Svg/TodoList.svg" class="" />
           <div
-            id="menu"
+            id="menu-icon-box"
             class="w-12 h-12 flex justify-center items-center bg-(--gray-background) rounded-2xl"
           >
             <img id="menu-icon" src="Images/Svg/menu.svg" alt="menu" />
@@ -221,6 +221,16 @@
         </button>
       </div>
     </section>
+    <!------------- Menu ------------->
+    <ul
+      id="menu"
+      class="w-full rounded-t-2xl font-bold bg-white shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] flex flex-col gap-5 p-12 absolute transition-all duration-200 z-50 opacity-0"
+    >
+      <li class="border-b border-b-[#7B7B7B80] pb-5">Upgrade to pro</li>
+      <li class="border-b border-b-[#7B7B7B80] pb-5">Settings</li>
+      <li class="border-b border-b-[#7B7B7B80] pb-5">About</li>
+      <li class="mb-5">Help</li>
+    </ul>
 
     <script src="Js/app.js"></script>
   </body>

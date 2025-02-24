@@ -1,73 +1,72 @@
 // DOM Elements //
 
-const createTaskButton = document.getElementById('create-task-button')
-const taskPopup = document.getElementById('task-popup')
-const closePopup = document.getElementById('popup-back-button')
-const tasksWrapper = document.getElementById('tasks-wrapper')
-const submitTaskButton = document.getElementById('submit-task')
+const createTaskButton = document.getElementById("create-task-button");
+const taskPopup = document.getElementById("task-popup");
+const closePopup = document.getElementById("popup-back-button");
+const tasksWrapper = document.getElementById("tasks-wrapper");
+const submitTaskButton = document.getElementById("submit-task");
 
-const taskNameInput = document.getElementById('task-name-input')
-const dateInput = document.getElementById('date-input')
-const descriptionInput = document.getElementById('description-input')
+const taskNameInput = document.getElementById("task-name-input");
+const dateInput = document.getElementById("date-input");
+const descriptionInput = document.getElementById("description-input");
 
+const menuButton = document.getElementById("menu-icon-box");
+const menu = document.getElementById("menu");
 
 // Variables //
 
-let tasks = []
+let tasks = [];
 
 // Task Popup //
 
-createTaskButton.addEventListener('click', () => {
-    showTaskPopup()
-})
+createTaskButton.addEventListener("click", () => {
+  showTaskPopup();
+});
 
-function showTaskPopup () {
-    taskPopup.classList.remove('hidden')
+function showTaskPopup() {
+  taskPopup.classList.remove("hidden");
 }
 
-closePopup.addEventListener('click', () => {
-    hideTaskPopup()
-})
+closePopup.addEventListener("click", () => {
+  hideTaskPopup();
+});
 
-function hideTaskPopup () {
-    taskPopup.classList.add('hidden')
+function hideTaskPopup() {
+  taskPopup.classList.add("hidden");
 }
-
 
 // Local Storage //
 
-function getLocalStorageData () {
-    return JSON.parse(localStorage.getItem('tasks'))
+function getLocalStorageData() {
+  return JSON.parse(localStorage.getItem("tasks"));
 }
 
-function addDataToLocalStorage (tasks) {
-    localStorage.setItem('tasks', JSON.stringify(tasks))
+function addDataToLocalStorage(tasks) {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
-
 
 // Create Task //
 
-submitTaskButton.addEventListener('click', () => {
-    let data = {
-        taskName : taskNameInput.value,
-        date : dateInput.value,
-        description : descriptionInput.value
-    }
+submitTaskButton.addEventListener("click", () => {
+  let data = {
+    taskName: taskNameInput.value,
+    date: dateInput.value,
+    description: descriptionInput.value,
+  };
 
-    if (getLocalStorageData()) {
-        let localTasks = getLocalStorageData()
-        tasks = []
-        localTasks.forEach (task => {
-            task.push(task)
-        })
-    } else {
-        tasks.push(data)
-        addDataToLocalStorage(tasks)
-        clearDom()
-        addTasksToDom(tasks)
-    }
-})
-
+  if (getLocalStorageData()) {
+    let localTasks = getLocalStorageData();
+    tasks = [];
+    localTasks.forEach((task) => {
+      task.push(task);
+    });
+  } else {
+    tasks.push(data);
+    addDataToLocalStorage(tasks);
+    clearDom();
+    addTasksToDom(tasks);
+  }
+});
 
 // Add Tasks To DOM //
 
@@ -90,9 +89,20 @@ submitTaskButton.addEventListener('click', () => {
 //     })
 // }
 
+// Menu //
+
+menuButton.addEventListener("click", () => {
+  if (menu.style.opacity == 0) {
+    menu.style.bottom = "0";
+    menu.style.opacity = 1;
+  } else {
+    menu.style.bottom = "-40%";
+    menu.style.opacity = 0;
+  }
+});
 
 // Clear DOM Tasks //
 
-function clearDom () {
-    tasksWrapper.innerHTML = ''
+function clearDom() {
+  tasksWrapper.innerHTML = "";
 }
