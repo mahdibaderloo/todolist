@@ -13,6 +13,10 @@ const descriptionInput = document.getElementById("description-input");
 const menuButton = document.getElementById("menu-icon-box");
 const menu = document.getElementById("menu");
 
+const notificationBox = document.getElementById("notification-box");
+const notificationButton = document.getElementById("notification-icon");
+const leftIcon = document.getElementById("left-icon");
+
 // Variables //
 
 let tasks = [];
@@ -113,6 +117,26 @@ function closeMenu() {
 
 function clearDom() {
   tasksWrapper.innerHTML = "";
+}
+
+// Notification //
+
+notificationButton.addEventListener("click", () => {
+  openNotification();
+});
+
+function openNotification() {
+  notificationBox.style.opacity = 1;
+  notificationBox.style.left = "0";
+}
+
+leftIcon.addEventListener("click", () => {
+  closeNotification();
+});
+
+function closeNotification() {
+  notificationBox.style.left = "-110%";
+  notificationBox.style.opacity = 0;
 }
 
 // Window //
