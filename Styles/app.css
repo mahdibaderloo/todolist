@@ -852,6 +852,9 @@
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
   .h-11 {
     height: calc(var(--spacing) * 11);
   }
@@ -914,6 +917,9 @@
   }
   .w-5 {
     width: calc(var(--spacing) * 5);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
   }
   .w-11 {
     width: calc(var(--spacing) * 11);
@@ -1891,6 +1897,10 @@
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .text-\[14px\] {
     font-size: 14px;
