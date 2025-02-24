@@ -603,6 +603,18 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .left-\[-20\%\] {
+    left: -20%;
+  }
+  .left-\[-60\%\] {
+    left: -60%;
+  }
+  .left-\[-90\%\] {
+    left: -90%;
+  }
+  .left-\[-110\%\] {
+    left: -110%;
+  }
   .isolate {
     isolation: isolate;
   }
@@ -837,6 +849,12 @@
   .h-1\.5 {
     height: calc(var(--spacing) * 1.5);
   }
+  .h-2 {
+    height: calc(var(--spacing) * 2);
+  }
+  .h-3 {
+    height: calc(var(--spacing) * 3);
+  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
@@ -858,8 +876,17 @@
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
+  .h-26 {
+    height: calc(var(--spacing) * 26);
+  }
+  .h-26\.5 {
+    height: calc(var(--spacing) * 26.5);
+  }
   .h-27 {
     height: calc(var(--spacing) * 27);
+  }
+  .h-27\.5 {
+    height: calc(var(--spacing) * 27.5);
   }
   .h-28 {
     height: calc(var(--spacing) * 28);
@@ -1583,6 +1610,9 @@
     --tw-border-style: solid;
     border-style: solid;
   }
+  .border-\[\#00000066\] {
+    border-color: #00000066;
+  }
   .border-\[rgba\(0\,0\,0\,0\.6\)\] {
     border-color: rgba(0,0,0,0.6);
   }
@@ -1803,6 +1833,9 @@
   .p-12 {
     padding: calc(var(--spacing) * 12);
   }
+  .p-20 {
+    padding: calc(var(--spacing) * 20);
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
@@ -1815,11 +1848,26 @@
   .pt-1 {
     padding-top: calc(var(--spacing) * 1);
   }
+  .pt-8 {
+    padding-top: calc(var(--spacing) * 8);
+  }
+  .pt-12 {
+    padding-top: calc(var(--spacing) * 12);
+  }
+  .pr-1 {
+    padding-right: calc(var(--spacing) * 1);
+  }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
   }
   .pr-15 {
     padding-right: calc(var(--spacing) * 15);
+  }
+  .pr-16 {
+    padding-right: calc(var(--spacing) * 16);
+  }
+  .pr-20 {
+    padding-right: calc(var(--spacing) * 20);
   }
   .pb-1 {
     padding-bottom: calc(var(--spacing) * 1);
@@ -1841,6 +1889,12 @@
   }
   .pl-15 {
     padding-left: calc(var(--spacing) * 15);
+  }
+  .pl-16 {
+    padding-left: calc(var(--spacing) * 16);
+  }
+  .pl-20 {
+    padding-left: calc(var(--spacing) * 20);
   }
   .text-center {
     text-align: center;

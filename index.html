@@ -108,8 +108,8 @@
         <div class="relative">
           <img
             src="Images/Svg/notification.svg"
-            alt="notification"
-            id="notification"
+            alt="notification-icon"
+            id="notification-icon"
           />
           <span
             class="absolute top-0 right-1 bg-red-800 w-1.5 h-1.5 rounded-full"
@@ -244,6 +244,45 @@
       <li class="border-b border-b-[#7B7B7B80] pb-5">About</li>
       <li class="mb-5">Help</li>
     </ul>
+    <!------------- Notification ------------->
+    <section
+      id="notification-box"
+      class="w-full h-full absolute left-[-110%] top-0 bottom-0 z-50"
+    >
+      <div
+        id="notification-header"
+        class="w-full h-26.5 bg-teal-600 flex justify-around items-center"
+      >
+        <span></span>
+        <img
+          id="notification-header-title"
+          src="Images/Svg/notification-text.svg"
+          class="w-40"
+        />
+        <div
+          id="back-icon-box"
+          class="w-10 h-10 flex justify-center items-center bg-(--gray-background) rounded-2xl"
+        >
+          <img
+            id="left-icon"
+            src="Images/Svg/arrow-left.svg"
+            alt="left"
+            class="w-4"
+          />
+        </div>
+      </div>
+      <ul
+        id="notification-main"
+        class="bg-white w-full h-full pr-16 pl-16 pt-8"
+      >
+        <li
+          class="flex justify-between items-center p-4 border border-[#00000066] rounded-xl"
+        >
+          <p class="font-bold text-xl">Title</p>
+          <img src="Images/Svg/arrow-down.svg" alt="arrow" class="w-3 h-2" />
+        </li>
+      </ul>
+    </section>
 
     <script src="Js/app.js"></script>
   </body>
