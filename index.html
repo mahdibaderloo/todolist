@@ -1,206 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
-    <link rel="stylesheet" href="Styles/app.css">
-</head>
-<body>
+    <link rel="stylesheet" href="Styles/app.css" />
+  </head>
+  <body>
     <!------------- Container -------------->
-    <div class="container w-full h-screen flex flex-col ">
-    <!-------------- Header ---------------->
-        <header id="header" class="w-full h-36 bg-teal-600 rounded-bl-[104px] flex justify-end">
-            <div id="header-content" class="w-3/4 h-full flex justify-around items-center ">
-                <img id="Brand-name" src="Images/Svg/TodoList.svg" class="">
-                <div id="menu" class="w-12 h-12 flex justify-center items-center bg-(--gray-background) rounded-2xl">
-                    <img id="menu-icon" src="Images/Svg/menu.svg" alt="menu">
+    <div class="container w-full h-screen flex flex-col">
+      <!-------------- Header ---------------->
+      <header id="header" class="w-full h-36 bg-teal-600 flex justify-end">
+        <div
+          id="header-content"
+          class="w-full h-full flex justify-around items-center"
+        >
+          <div
+            id="mode-box"
+            class="w-12 h-12 flex justify-center items-center bg-(--gray-background) rounded-2xl"
+          >
+            <img
+              id="dark-icon"
+              src="Images/Svg/dark-mode.svg"
+              alt="dark-logo"
+            />
+            <img
+              id="light-icon"
+              src="Images/Svg/light-mode.svg"
+              alt="light-logo"
+              class="hidden"
+            />
+          </div>
+          <img id="Brand-name" src="Images/Svg/TodoList.svg" class="" />
+          <div
+            id="menu"
+            class="w-12 h-12 flex justify-center items-center bg-(--gray-background) rounded-2xl"
+          >
+            <img id="menu-icon" src="Images/Svg/menu.svg" alt="menu" />
+          </div>
+        </div>
+      </header>
+      <!---------------- Main ---------------->
+      <main
+        id="main"
+        class="w-full h-screen flex flex-col justify-between overflow-hidden"
+      >
+        <!----------- Tasks Section ------------>
+        <section
+          id="tasks-section"
+          class="w-full h-[90%] px-5 flex flex-col justify-start items-center gap-4 mt-10"
+        >
+          <p id="tasks-title" class="text-2xl font-bold w-full ml-7">Tasks</p>
+          <!----------- Tasks Wrapper ------------->
+          <ul
+            id="tasks-wrapper"
+            class="w-full h-full flex flex-col items-center gap-4 overflow-y-scroll mt-3 p-4 pb-24"
+          >
+            <li
+              id="task-box"
+              class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1"
+            >
+              <div
+                id="done"
+                class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl"
+              >
+                <img src="Images/Svg/tick.svg" alt="" id="tick-icon" class="" />
+              </div>
+              <div id="task-information" class="flex flex-col gap-0.5 ml-4">
+                <p id="task-title" class="text-2xl font-bold">Title</p>
+                <div id="time-box">
+                  <p id="task-time" class="text-[14px] opacity-60">
+                    9:00 - 23:00
+                  </p>
+                  <p id="task-date" class="text-[14px] opacity-60">
+                    16 April, Friday
+                  </p>
                 </div>
-            </div>
-        </header>
-    <!---------------- Main ---------------->
-    <main id="main" class="w-full h-screen flex flex-col justify-between overflow-hidden">
-    <!----------- Tasks Section ------------>
-            <section id="tasks-section" class="w-full h-[90%] px-5 flex flex-col justify-start items-center gap-4 mt-10">
-                <p id="tasks-title" class="text-2xl font-bold w-full ml-7">Tasks</p>
-    <!----------- Tasks Wrapper ------------->
-                <ul id="tasks-wrapper" class="w-full h-full flex flex-col items-center gap-4 overflow-y-scroll mt-3 p-4 pb-24">
-                    <li id="task-box" class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1">
-                        <div id="done" class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl">
-                            <img src="Images/Svg/tick.svg" alt="" id="tick-icon" class="">
-                        </div>
-                        <div id="task-information" class="flex flex-col gap-0.5 ml-4">
-                            <p id="task-title" class="text-2xl font-bold">Title</p>
-                            <div id="time-box">
-                                <p id="task-time" class="text-[14px] opacity-60">9:00 - 23:00</p>
-                                <p id="task-date" class="text-[14px] opacity-60">16 April, Friday</p>
-                            </div>
-                        </div>
-                        <img src="Images/Svg/arrow-right.svg" alt="" id="task-setting-icon" class="ml-auto mr-3 w-3">
-                    </li>
-                    <li id="task-box" class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1">
-                        <div id="done" class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl">
-                            <img src="Images/Svg/tick.svg" alt="" id="tick-icon" class="hidden">
-                        </div>
-                        <div id="task-information" class="flex flex-col gap-0.5 ml-4">
-                            <p id="task-title" class="text-2xl font-bold">Title</p>
-                            <div id="time-box">
-                                <p id="task-time" class="text-[14px] opacity-60">9:00 - 23:00</p>
-                                <p id="task-date" class="text-[14px] opacity-60">16 April, Friday</p>
-                            </div>
-                        </div>
-                        <img src="Images/Svg/arrow-right.svg" alt="" id="task-setting-icon" class="ml-auto mr-3 w-3">
-                    </li>
-                    <li id="task-box" class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1">
-                        <div id="done" class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl">
-                            <img src="Images/Svg/tick.svg" alt="" id="tick-icon" class="hidden">
-                        </div>
-                        <div id="task-information" class="flex flex-col gap-0.5 ml-4">
-                            <p id="task-title" class="text-2xl font-bold">Title</p>
-                            <div id="time-box">
-                                <p id="task-time" class="text-[14px] opacity-60">9:00 - 23:00</p>
-                                <p id="task-date" class="text-[14px] opacity-60">16 April, Friday</p>
-                            </div>
-                        </div>
-                        <img src="Images/Svg/arrow-right.svg" alt="" id="task-setting-icon" class="ml-auto mr-3 w-3">
-                    </li>
-                    <li id="task-box" class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1">
-                        <div id="done" class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl">
-                            <img src="Images/Svg/tick.svg" alt="" id="tick-icon" class="hidden">
-                        </div>
-                        <div id="task-information" class="flex flex-col gap-0.5 ml-4">
-                            <p id="task-title" class="text-2xl font-bold">Title</p>
-                            <div id="time-box">
-                                <p id="task-time" class="text-[14px] opacity-60">9:00 - 23:00</p>
-                                <p id="task-date" class="text-[14px] opacity-60">16 April, Friday</p>
-                            </div>
-                        </div>
-                        <img src="Images/Svg/arrow-right.svg" alt="" id="task-setting-icon" class="ml-auto mr-3 w-3">
-                    </li>
-                    <li id="task-box" class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1">
-                        <div id="done" class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl">
-                            <img src="Images/Svg/tick.svg" alt="" id="tick-icon" class="hidden">
-                        </div>
-                        <div id="task-information" class="flex flex-col gap-0.5 ml-4">
-                            <p id="task-title" class="text-2xl font-bold">Title</p>
-                            <div id="time-box">
-                                <p id="task-time" class="text-[14px] opacity-60">9:00 - 23:00</p>
-                                <p id="task-date" class="text-[14px] opacity-60">16 April, Friday</p>
-                            </div>
-                        </div>
-                        <img src="Images/Svg/arrow-right.svg" alt="" id="task-setting-icon" class="ml-auto mr-3 w-3">
-                    </li>
-                    <li id="task-box" class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1">
-                        <div id="done" class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl">
-                            <img src="Images/Svg/tick.svg" alt="" id="tick-icon" class="hidden">
-                        </div>
-                        <div id="task-information" class="flex flex-col gap-0.5 ml-4">
-                            <p id="task-title" class="text-2xl font-bold">Title</p>
-                            <div id="time-box">
-                                <p id="task-time" class="text-[14px] opacity-60">9:00 - 23:00</p>
-                                <p id="task-date" class="text-[14px] opacity-60">16 April, Friday</p>
-                            </div>
-                        </div>
-                        <img src="Images/Svg/arrow-right.svg" alt="" id="task-setting-icon" class="ml-auto mr-3 w-3">
-                    </li>
-                    <li id="task-box" class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1">
-                        <div id="done" class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl">
-                            <img src="Images/Svg/tick.svg" alt="" id="tick-icon" class="hidden">
-                        </div>
-                        <div id="task-information" class="flex flex-col gap-0.5 ml-4">
-                            <p id="task-title" class="text-2xl font-bold">Title</p>
-                            <div id="time-box">
-                                <p id="task-time" class="text-[14px] opacity-60">9:00 - 23:00</p>
-                                <p id="task-date" class="text-[14px] opacity-60">16 April, Friday</p>
-                            </div>
-                        </div>
-                        <img src="Images/Svg/arrow-right.svg" alt="" id="task-setting-icon" class="ml-auto mr-3 w-3">
-                    </li>
-                    <li id="task-box" class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1">
-                        <div id="done" class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl">
-                            <img src="Images/Svg/tick.svg" alt="" id="tick-icon" class="hidden">
-                        </div>
-                        <div id="task-information" class="flex flex-col gap-0.5 ml-4">
-                            <p id="task-title" class="text-2xl font-bold">Title</p>
-                            <div id="time-box">
-                                <p id="task-time" class="text-[14px] opacity-60">9:00 - 23:00</p>
-                                <p id="task-date" class="text-[14px] opacity-60">16 April, Friday</p>
-                            </div>
-                        </div>
-                        <img src="Images/Svg/arrow-right.svg" alt="" id="task-setting-icon" class="ml-auto mr-3 w-3">
-                    </li>
-                    <li id="task-box" class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1">
-                        <div id="done" class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl">
-                            <img src="Images/Svg/tick.svg" alt="" id="tick-icon" class="">
-                        </div>
-                        <div id="task-information" class="flex flex-col gap-0.5 ml-4">
-                            <p id="task-title" class="text-2xl font-bold">Title</p>
-                            <div id="time-box">
-                                <p id="task-time" class="text-[14px] opacity-60">9:00 - 23:00</p>
-                                <p id="task-date" class="text-[14px] opacity-60">16 April, Friday</p>
-                            </div>
-                        </div>
-                        <img src="Images/Svg/arrow-right.svg" alt="" id="task-setting-icon" class="ml-auto mr-3 w-3">
-                    </li>
-
-                </ul>
-            </section>
-        </main>
-        
+              </div>
+              <img
+                src="Images/Svg/arrow-right.svg"
+                alt=""
+                id="task-setting-icon"
+                class="ml-auto mr-3 w-3"
+              />
+            </li>
+            <li
+              id="task-box"
+              class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1"
+            >
+              <div
+                id="done"
+                class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl"
+              >
+                <img
+                  src="Images/Svg/tick.svg"
+                  alt=""
+                  id="tick-icon"
+                  class="hidden"
+                />
+              </div>
+              <div id="task-information" class="flex flex-col gap-0.5 ml-4">
+                <p id="task-title" class="text-2xl font-bold">Title</p>
+                <div id="time-box">
+                  <p id="task-time" class="text-[14px] opacity-60">
+                    9:00 - 23:00
+                  </p>
+                  <p id="task-date" class="text-[14px] opacity-60">
+                    16 April, Friday
+                  </p>
+                </div>
+              </div>
+              <img
+                src="Images/Svg/arrow-right.svg"
+                alt=""
+                id="task-setting-icon"
+                class="ml-auto mr-3 w-3"
+              />
+            </li>
+            <li
+              id="task-box"
+              class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1"
+            >
+              <div
+                id="done"
+                class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl"
+              >
+                <img
+                  src="Images/Svg/tick.svg"
+                  alt=""
+                  id="tick-icon"
+                  class="hidden"
+                />
+              </div>
+              <div id="task-information" class="flex flex-col gap-0.5 ml-4">
+                <p id="task-title" class="text-2xl font-bold">Title</p>
+                <div id="time-box">
+                  <p id="task-time" class="text-[14px] opacity-60">
+                    9:00 - 23:00
+                  </p>
+                  <p id="task-date" class="text-[14px] opacity-60">
+                    16 April, Friday
+                  </p>
+                </div>
+              </div>
+              <img
+                src="Images/Svg/arrow-right.svg"
+                alt=""
+                id="task-setting-icon"
+                class="ml-auto mr-3 w-3"
+              />
+            </li>
+            <li
+              id="task-box"
+              class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1"
+            >
+              <div
+                id="done"
+                class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl"
+              >
+                <img
+                  src="Images/Svg/tick.svg"
+                  alt=""
+                  id="tick-icon"
+                  class="hidden"
+                />
+              </div>
+              <div id="task-information" class="flex flex-col gap-0.5 ml-4">
+                <p id="task-title" class="text-2xl font-bold">Title</p>
+                <div id="time-box">
+                  <p id="task-time" class="text-[14px] opacity-60">
+                    9:00 - 23:00
+                  </p>
+                  <p id="task-date" class="text-[14px] opacity-60">
+                    16 April, Friday
+                  </p>
+                </div>
+              </div>
+              <img
+                src="Images/Svg/arrow-right.svg"
+                alt=""
+                id="task-setting-icon"
+                class="ml-auto mr-3 w-3"
+              />
+            </li>
+            <li
+              id="task-box"
+              class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1"
+            >
+              <div
+                id="done"
+                class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl"
+              >
+                <img
+                  src="Images/Svg/tick.svg"
+                  alt=""
+                  id="tick-icon"
+                  class="hidden"
+                />
+              </div>
+              <div id="task-information" class="flex flex-col gap-0.5 ml-4">
+                <p id="task-title" class="text-2xl font-bold">Title</p>
+                <div id="time-box">
+                  <p id="task-time" class="text-[14px] opacity-60">
+                    9:00 - 23:00
+                  </p>
+                  <p id="task-date" class="text-[14px] opacity-60">
+                    16 April, Friday
+                  </p>
+                </div>
+              </div>
+              <img
+                src="Images/Svg/arrow-right.svg"
+                alt=""
+                id="task-setting-icon"
+                class="ml-auto mr-3 w-3"
+              />
+            </li>
+            <li
+              id="task-box"
+              class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1"
+            >
+              <div
+                id="done"
+                class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl"
+              >
+                <img
+                  src="Images/Svg/tick.svg"
+                  alt=""
+                  id="tick-icon"
+                  class="hidden"
+                />
+              </div>
+              <div id="task-information" class="flex flex-col gap-0.5 ml-4">
+                <p id="task-title" class="text-2xl font-bold">Title</p>
+                <div id="time-box">
+                  <p id="task-time" class="text-[14px] opacity-60">
+                    9:00 - 23:00
+                  </p>
+                  <p id="task-date" class="text-[14px] opacity-60">
+                    16 April, Friday
+                  </p>
+                </div>
+              </div>
+              <img
+                src="Images/Svg/arrow-right.svg"
+                alt=""
+                id="task-setting-icon"
+                class="ml-auto mr-3 w-3"
+              />
+            </li>
+            <li
+              id="task-box"
+              class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1"
+            >
+              <div
+                id="done"
+                class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl"
+              >
+                <img
+                  src="Images/Svg/tick.svg"
+                  alt=""
+                  id="tick-icon"
+                  class="hidden"
+                />
+              </div>
+              <div id="task-information" class="flex flex-col gap-0.5 ml-4">
+                <p id="task-title" class="text-2xl font-bold">Title</p>
+                <div id="time-box">
+                  <p id="task-time" class="text-[14px] opacity-60">
+                    9:00 - 23:00
+                  </p>
+                  <p id="task-date" class="text-[14px] opacity-60">
+                    16 April, Friday
+                  </p>
+                </div>
+              </div>
+              <img
+                src="Images/Svg/arrow-right.svg"
+                alt=""
+                id="task-setting-icon"
+                class="ml-auto mr-3 w-3"
+              />
+            </li>
+            <li
+              id="task-box"
+              class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1"
+            >
+              <div
+                id="done"
+                class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl"
+              >
+                <img
+                  src="Images/Svg/tick.svg"
+                  alt=""
+                  id="tick-icon"
+                  class="hidden"
+                />
+              </div>
+              <div id="task-information" class="flex flex-col gap-0.5 ml-4">
+                <p id="task-title" class="text-2xl font-bold">Title</p>
+                <div id="time-box">
+                  <p id="task-time" class="text-[14px] opacity-60">
+                    9:00 - 23:00
+                  </p>
+                  <p id="task-date" class="text-[14px] opacity-60">
+                    16 April, Friday
+                  </p>
+                </div>
+              </div>
+              <img
+                src="Images/Svg/arrow-right.svg"
+                alt=""
+                id="task-setting-icon"
+                class="ml-auto mr-3 w-3"
+              />
+            </li>
+            <li
+              id="task-box"
+              class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1"
+            >
+              <div
+                id="done"
+                class="w-11 h-11 flex justify-center items-center bg-teal-600 rounded-xl"
+              >
+                <img src="Images/Svg/tick.svg" alt="" id="tick-icon" class="" />
+              </div>
+              <div id="task-information" class="flex flex-col gap-0.5 ml-4">
+                <p id="task-title" class="text-2xl font-bold">Title</p>
+                <div id="time-box">
+                  <p id="task-time" class="text-[14px] opacity-60">
+                    9:00 - 23:00
+                  </p>
+                  <p id="task-date" class="text-[14px] opacity-60">
+                    16 April, Friday
+                  </p>
+                </div>
+              </div>
+              <img
+                src="Images/Svg/arrow-right.svg"
+                alt=""
+                id="task-setting-icon"
+                class="ml-auto mr-3 w-3"
+              />
+            </li>
+          </ul>
+        </section>
+      </main>
     </div>
 
     <!------------- Navbar ------------->
-    <section id="navbar" class="w-full h-20 bg-white shadow-[0px_2px_11.4px_0px_rgba(0,137,123,1)] fixed bottom-0">
-    <!--------- Navbar Left  ----------->
-        <div id="navbar-left" class="w-1/2 flex items-center"></div>
-        <div id="create-task-button" class="w-20 h-20 flex justify-center items-center bg-teal-600 rounded-full shadow-[0px_3px_10px_-4px_rgba(0,0,0,1)] absolute left-0 right-0 mx-auto bottom-10">
-            <img src="Images/Svg/plus.svg" alt="" id="create-task-icon" class="">
-        </div>
-    <!--------- Navbar Right ----------->
-        <div id="navbar-right" class="w-1/2 flex items-center">
-        </div>
+    <section
+      id="navbar"
+      class="w-full h-18 bg-white shadow-[0px_2px_11.4px_0px_rgba(0,137,123,1)] fixed bottom-0"
+    >
+      <!--------- Navbar Left  ----------->
+      <div id="navbar-left" class="w-1/2 flex items-center"></div>
+      <div
+        id="create-task-button"
+        class="w-15 h-15 flex justify-center items-center bg-teal-600 rounded-full shadow-[0px_3px_10px_-4px_rgba(0,0,0,1)] absolute left-0 right-0 mx-auto bottom-10"
+      >
+        <img
+          src="Images/Svg/plus.svg"
+          alt=""
+          id="create-task-icon"
+          class="w-5 h-5"
+        />
+      </div>
+      <!--------- Navbar Right ----------->
+      <div id="navbar-right" class="w-1/2 flex items-center"></div>
     </section>
 
     <!------------- Task Popup ------------->
-    <section id="task-popup" class="hidden w-full h-full absolute left-0 top-0 bottom-0 z-50 bg-white">
-    <!----------- Header Popup ------------->
-        <div id="task-popup-header" class="w-full h-32 bg-teal-600 rounded-br-[104px] flex">
-            <div id="header-popup-content" class="w-[90%] h-full flex justify-around items-center">
-                <div id="popup-back-button" class="w-12 h-12 flex justify-center items-center bg-(--gray-background) rounded-2xl">
-                    <img id="popup-back-icon" src="Images/Svg/arrow-left.svg" alt="back">
-                </div>
-                <img src="Images/Svg/CreateNewTask.svg" id="popup-title" class="w-60">
-            </div>
+    <section
+      id="task-popup"
+      class="hidden w-full h-full absolute left-0 top-0 bottom-0 z-50 bg-white"
+    >
+      <!----------- Header Popup ------------->
+      <div
+        id="task-popup-header"
+        class="w-full h-32 bg-teal-600 rounded-br-[104px] flex"
+      >
+        <div
+          id="header-popup-content"
+          class="w-[90%] h-full flex justify-around items-center"
+        >
+          <div
+            id="popup-back-button"
+            class="w-12 h-12 flex justify-center items-center bg-(--gray-background) rounded-2xl"
+          >
+            <img
+              id="popup-back-icon"
+              src="Images/Svg/arrow-left.svg"
+              alt="back"
+            />
+          </div>
+          <img
+            src="Images/Svg/CreateNewTask.svg"
+            id="popup-title"
+            class="w-60"
+          />
         </div>
-    <!------------ Main Popup -------------->
-        <div id="popup-main" class="w-full max-[200vh] p-12 bg-white">
-            <div id="task-name-box">
-                <p id="task-name-title" class="text-2xl font-bold">Task name:</p>
-                <input type="text" placeholder="Title" id="task-name-input" class="w-full h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl">
-            </div>
-            <div id="date-box" class="mt-10">
-                <p id="date-title" class="text-2xl font-bold">Date:</p>
-                <input type="text" readonly placeholder="16 April, Friday" id="date-input" class="w-full h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl">
-            </div>
-            <div id="start-end-time-box" class="flex justify-between mt-10">
-                <div id="start-time-box" class="">
-                    <p id="start-time-title" class="text-2xl font-bold">Start Time:</p>
-                    <input type="text" id="start-time-input" class="w-[90%] h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl">
-                </div>
-                <div id="end-time-box" class="flex flex-col items-end">
-                    <p id="end-time-title" class="text-2xl font-bold">End time:</p>
-                    <input type="text" id="end-time-input" class="w-[90%] h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl">
-                </div>
-            </div>
-            <div id="description-box" class="mt-10">
-                <p id="description-title" class="text-2xl font-bold">Description:</p>
-                <textarea draggable="true" maxlength="150" placeholder="150 Characters" name="" id="description-input" class="w-full h-15 bg pl-2.5 pt-0.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"></textarea>
-            </div>
-            <button id="submit-task" class="w-full h-15 bg-teal-600 flex justify-center items-center text-2xl text-white font-bold shadow-[0_3px_6px_1px_rgba(0,0,0,0.25)] rounded-xl mt-10">Create Task</button>
+      </div>
+      <!------------ Main Popup -------------->
+      <div id="popup-main" class="w-full max-[200vh] p-12 bg-white">
+        <div id="task-name-box">
+          <p id="task-name-title" class="text-2xl font-bold">Task name:</p>
+          <input
+            type="text"
+            placeholder="Title"
+            id="task-name-input"
+            class="w-full h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"
+          />
         </div>
+        <div id="date-box" class="mt-10">
+          <p id="date-title" class="text-2xl font-bold">Date:</p>
+          <input
+            type="text"
+            readonly
+            placeholder="16 April, Friday"
+            id="date-input"
+            class="w-full h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"
+          />
+        </div>
+        <div id="start-end-time-box" class="flex justify-between mt-10">
+          <div id="start-time-box" class="">
+            <p id="start-time-title" class="text-2xl font-bold">Start Time:</p>
+            <input
+              type="text"
+              id="start-time-input"
+              class="w-[90%] h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"
+            />
+          </div>
+          <div id="end-time-box" class="flex flex-col items-end">
+            <p id="end-time-title" class="text-2xl font-bold">End time:</p>
+            <input
+              type="text"
+              id="end-time-input"
+              class="w-[90%] h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"
+            />
+          </div>
+        </div>
+        <div id="description-box" class="mt-10">
+          <p id="description-title" class="text-2xl font-bold">Description:</p>
+          <textarea
+            draggable="true"
+            maxlength="150"
+            placeholder="150 Characters"
+            name=""
+            id="description-input"
+            class="w-full h-15 bg pl-2.5 pt-0.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"
+          ></textarea>
+        </div>
+        <button
+          id="submit-task"
+          class="w-full h-15 bg-teal-600 flex justify-center items-center text-2xl text-white font-bold shadow-[0_3px_6px_1px_rgba(0,0,0,0.25)] rounded-xl mt-10"
+        >
+          Create Task
+        </button>
+      </div>
     </section>
 
-
     <script src="Js/app.js"></script>
-</body>
+  </body>
 </html>
