@@ -6,9 +6,9 @@
     <title>To Do List</title>
     <link rel="stylesheet" href="Styles/app.css" />
   </head>
-  <body>
+  <body class="overflow-y-hidden">
     <!------------- Container -------------->
-    <div class="container w-full h-screen flex flex-col overflow-y-hidden">
+    <div class="container w-full h-screen flex flex-col">
       <!-------------- Header ---------------->
       <header id="header" class="w-full h-36 bg-teal-600 flex justify-end">
         <div
@@ -135,7 +135,7 @@
     <!------------- Task Popup ------------->
     <section
       id="task-popup"
-      class="hidden w-full h-full absolute left-0 top-0 bottom-0 z-50 bg-white"
+      class="hidden w-full h-full fixed left-0 top-0 bottom-0 z-50 bg-white"
     >
       <!----------- Header Popup ------------->
       <div
@@ -176,13 +176,19 @@
         </div>
         <div id="date-box" class="mt-10">
           <p id="date-title" class="text-2xl font-bold">Date:</p>
-          <input
-            type="text"
-            readonly
-            placeholder="16 April, Friday"
-            id="date-input"
-            class="w-full h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"
-          />
+          <div
+            id="dat-input-box"
+            class="w-full h-15 flex p-2.5 border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"
+          >
+            <input
+              type="text"
+              readonly
+              placeholder="16 April, Friday"
+              id="date-input"
+              class="w-full h-full outline-none border-none text-lg"
+            />
+            <img src="Images/Svg/calendar.svg" alt="" class="w-6" />
+          </div>
         </div>
         <div id="start-end-time-box" class="flex justify-between mt-10">
           <div id="start-time-box" class="">
@@ -205,12 +211,11 @@
         <div id="description-box" class="mt-10">
           <p id="description-title" class="text-2xl font-bold">Description:</p>
           <textarea
-            draggable="true"
-            maxlength="150"
-            placeholder="150 Characters"
+            maxlength="100"
+            placeholder="100 Characters"
             name=""
             id="description-input"
-            class="w-full h-15 bg pl-2.5 pt-0.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"
+            class="w-full h-30 bg pl-2.5 pt-0.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"
           ></textarea>
         </div>
         <button

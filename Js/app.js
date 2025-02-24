@@ -93,13 +93,21 @@ submitTaskButton.addEventListener("click", () => {
 
 menuButton.addEventListener("click", () => {
   if (menu.style.opacity == 0) {
-    menu.style.bottom = "0";
-    menu.style.opacity = 1;
+    openMenu();
   } else {
-    menu.style.bottom = "-40%";
-    menu.style.opacity = 0;
+    closeMenu();
   }
 });
+
+function openMenu() {
+  menu.style.bottom = "0";
+  menu.style.opacity = 1;
+}
+
+function closeMenu() {
+  menu.style.opacity = 0;
+  menu.style.bottom = "-40%";
+}
 
 // Clear DOM Tasks //
 
