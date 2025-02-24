@@ -10,33 +10,39 @@
     <!------------- Container -------------->
     <div class="container w-full h-screen flex flex-col">
       <!-------------- Header ---------------->
-      <header id="header" class="w-full h-36 bg-teal-600 flex justify-end">
+      <header id="header" class="w-full h-30 bg-teal-600">
         <div
           id="header-content"
           class="w-full h-full flex justify-around items-center"
         >
           <div
             id="mode-box"
-            class="w-12 h-12 flex justify-center items-center bg-(--gray-background) rounded-2xl"
+            class="w-10 h-10 flex justify-center items-center bg-(--gray-background) rounded-2xl"
           >
             <img
               id="dark-icon"
               src="Images/Svg/dark-mode.svg"
               alt="dark-logo"
+              class="w-5"
             />
             <img
               id="light-icon"
               src="Images/Svg/light-mode.svg"
               alt="light-logo"
-              class="hidden"
+              class="hidden w-5"
             />
           </div>
-          <img id="Brand-name" src="Images/Svg/TodoList.svg" class="" />
+          <img id="Brand-name" src="Images/Svg/TodoList.svg" class="w-40" />
           <div
             id="menu-icon-box"
-            class="w-12 h-12 flex justify-center items-center bg-(--gray-background) rounded-2xl"
+            class="w-10 h-10 flex justify-center items-center bg-(--gray-background) rounded-2xl"
           >
-            <img id="menu-icon" src="Images/Svg/menu.svg" alt="menu" />
+            <img
+              id="menu-icon"
+              src="Images/Svg/menu.svg"
+              alt="menu"
+              class="w-5"
+            />
           </div>
         </div>
       </header>
@@ -140,27 +146,29 @@
       <!----------- Header Popup ------------->
       <div
         id="task-popup-header"
-        class="w-full h-32 bg-teal-600 rounded-br-[104px] flex"
+        class="w-full h-27 bg-teal-600 rounded-br-[104px] flex"
       >
         <div
           id="header-popup-content"
-          class="w-[90%] h-full flex justify-around items-center"
+          class="w-full h-full flex justify-around items-center"
         >
           <div
             id="popup-back-button"
-            class="w-12 h-12 flex justify-center items-center bg-(--gray-background) rounded-2xl"
+            class="w-10 h-10 flex justify-center items-center bg-(--gray-background) rounded-2xl"
           >
             <img
               id="popup-back-icon"
               src="Images/Svg/arrow-left.svg"
               alt="back"
+              class="w-4 h-4"
             />
           </div>
           <img
             src="Images/Svg/CreateNewTask.svg"
             id="popup-title"
-            class="w-60"
+            class="w-56"
           />
+          <span></span>
         </div>
       </div>
       <!------------ Main Popup -------------->

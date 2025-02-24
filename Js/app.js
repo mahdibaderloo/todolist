@@ -114,3 +114,15 @@ function closeMenu() {
 function clearDom() {
   tasksWrapper.innerHTML = "";
 }
+
+// Window //
+
+window.addEventListener("click", (e) => {
+  if (
+    e.target.id !== "menu" &&
+    e.target.id !== "menu-icon-box" &&
+    e.target.id !== "menu-icon"
+  ) {
+    closeMenu();
+  }
+});
