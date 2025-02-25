@@ -18,6 +18,8 @@ const leftIcon = document.getElementById("left-icon");
 
 const calendar = document.getElementById("calendar");
 
+const profile = document.getElementById("profile");
+
 // Variables //
 
 let tasks = [];
@@ -173,6 +175,16 @@ function openCalendar() {
 
 function closeCalendar() {
   calendar.classList.add("hidden");
+}
+
+// Profile //
+
+function openProfile() {
+  profile.classList.remove("hidden");
+}
+
+function closeProfile() {
+  profile.classList.add("hidden");
 }
 
 // Window //
