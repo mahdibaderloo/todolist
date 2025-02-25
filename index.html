@@ -105,7 +105,7 @@
         id="navbar-left"
         class="w-1/2 flex items-center justify-center gap-15 pr-15"
       >
-        <div class="relative">
+        <div class="relative" onclick="openNotification()">
           <img
             src="Images/Svg/notification.svg"
             alt="notification-icon"
@@ -237,7 +237,7 @@
     <!------------- Menu ------------->
     <ul
       id="menu"
-      class="w-full rounded-t-2xl font-bold bg-white shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] flex flex-col gap-5 p-12 absolute transition-all duration-200 z-50 opacity-0"
+      class="w-full rounded-t-2xl font-bold bg-white shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] flex flex-col gap-5 p-12 absolute transition-all duration-400 z-50 opacity-0"
     >
       <li class="border-b border-b-[#7B7B7B80] pb-5">Upgrade to pro</li>
       <li class="border-b border-b-[#7B7B7B80] pb-5">Settings</li>
@@ -247,7 +247,7 @@
     <!------------- Notification ------------->
     <section
       id="notification-box"
-      class="w-full h-full absolute left-[-110%] top-0 bottom-0 opacity-0 transition-all duration-200 z-50"
+      class="w-full h-full absolute left-[-110%] top-0 bottom-0 opacity-0 transition-all duration-400 z-50"
     >
       <div
         id="notification-header"
@@ -276,10 +276,21 @@
         class="bg-white w-full h-full pr-16 pl-16 pt-8"
       >
         <li
-          class="flex justify-between items-center p-4 border border-[#00000066] rounded-xl"
+          class="flex flex-col justify-between items-center p-4 border border-[#00000066] rounded-xl transition-all duration-300"
+          onclick="readNotificationMode(this)"
         >
-          <p class="font-bold text-xl">Title</p>
-          <img src="Images/Svg/arrow-down.svg" alt="arrow" class="w-3 h-2" />
+          <div class="w-full flex justify-between items-center gap-2">
+            <p class="font-bold text-xl">Title</p>
+            <img
+              src="Images/Svg/arrow-down.svg"
+              alt="arrow"
+              class="w-3 h-2 transition-all duration-300"
+            />
+          </div>
+          <span class="opacity-0 hidden transition-all duration-300"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptates, est!</span
+          >
         </li>
       </ul>
     </section>
