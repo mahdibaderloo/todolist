@@ -57,7 +57,7 @@
           <!----------- Tasks Wrapper ------------->
           <ul
             id="tasks-wrapper"
-            class="w-full h-full flex flex-col items-center gap-4 overflow-y-scroll mt-3 p-4 pb-24"
+            class="w-full h-full flex flex-col items-center gap-4 overflow-y-scroll mt-2 p-4 pb-24"
           >
             <li
               id="task-box"
@@ -70,7 +70,7 @@
                 <img src="Images/Svg/tick.svg" alt="" id="tick-icon" class="" />
               </div>
               <div id="task-information" class="flex flex-col gap-0.5 ml-4">
-                <p id="task-title" class="text-xl font-bold">Title</p>
+                <p id="task-title" class="font-bold">Title</p>
                 <div id="time-box">
                   <p id="task-time" class="text-[14px] opacity-60">
                     9:00 - 23:00
@@ -84,7 +84,7 @@
                 src="Images/Svg/arrow-right.svg"
                 alt=""
                 id="task-setting-icon"
-                class="ml-auto mr-3 w-3"
+                class="ml-auto mr-3 w-2"
               />
             </li>
           </ul>
@@ -100,23 +100,29 @@
       <!--------- Navbar Left  ----------->
       <div
         id="navbar-left"
-        class="w-1/2 flex items-center justify-center gap-15 pr-15"
+        class="w-1/2 flex items-center justify-center gap-14 pr-14"
       >
         <div class="relative" onclick="openNotification()">
           <img
             src="Images/Svg/notification.svg"
             alt="notification-icon"
             id="notification-icon"
+            class="w-5"
           />
           <span
-            class="absolute top-0 right-1 bg-red-800 w-1.5 h-1.5 rounded-full"
+            class="absolute top-0 right-0 bg-red-800 w-1.5 h-1.5 rounded-full"
           ></span>
         </div>
-        <img src="Images/Svg/calendar.svg" alt="calendar" id="calendar" />
+        <img
+          src="Images/Svg/calendar.svg"
+          alt="calendar"
+          id="calendar"
+          class="w-5"
+        />
       </div>
       <div
         id="create-task-button"
-        class="w-15 h-15 flex justify-center items-center bg-teal-600 rounded-full shadow-[0px_3px_10px_-4px_rgba(0,0,0,1)] absolute left-0 right-0 mx-auto bottom-7"
+        class="w-15 h-15 flex justify-center items-center bg-teal-600 rounded-full shadow-[0px_3px_10px_-4px_rgba(0,0,0,1)] absolute left-0 right-0 mx-auto bottom-6.5"
       >
         <img
           src="Images/Svg/plus.svg"
@@ -128,10 +134,15 @@
       <!--------- Navbar Right ----------->
       <div
         id="navbar-right"
-        class="w-1/2 flex items-center justify-center gap-15 pl-15"
+        class="w-1/2 flex items-center justify-center gap-14 pl-14"
       >
-        <img src="Images/Svg/profile.svg" alt="profile" id="profile" />
-        <img src="Images/Svg/home.svg" alt="home" id="home" />
+        <img
+          src="Images/Svg/profile.svg"
+          alt="profile"
+          id="profile"
+          class="w-5"
+        />
+        <img src="Images/Svg/home.svg" alt="home" id="home" class="w-5" />
       </div>
     </section>
 
