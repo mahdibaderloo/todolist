@@ -115,8 +115,8 @@
         </div>
         <img
           src="Images/Svg/calendar.svg"
-          alt="calendar"
-          id="calendar"
+          alt="calendar-icon"
+          id="calendar-icon"
           class="w-5"
         />
       </div>
@@ -176,7 +176,7 @@
             id="popup-title"
             class="w-56"
           />
-          <span></span>
+          <span class="w-10"></span>
         </div>
       </div>
       <!------------ Main Popup -------------->
@@ -261,7 +261,7 @@
         id="notification-header"
         class="w-full h-26.5 bg-teal-600 flex justify-around items-center"
       >
-        <span></span>
+        <span class="w-10"></span>
         <img
           id="notification-header-title"
           src="Images/Svg/notification-text.svg"
@@ -296,12 +296,81 @@
             />
           </div>
           <span
-            class="opacity-0 invisible transition-discrete ease-in duration-300"
+            class="opacity-0 invisible transition-discrete ease-in duration-200"
             >Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Voluptates, est!</span
           >
         </li>
       </ul>
+    </section>
+    <!------------- Calendar ------------->
+    <section
+      id="calendar"
+      class="bg-white fixed top-0 left-0 w-full h-full z-50"
+    >
+      <div
+        id="calendar-header"
+        class="w-full h-26.5 flex justify-between items-center pl-8 pr-8"
+      >
+        <div
+          class="w-10 h-10 flex justify-center items-center bg-(--gray-background) rounded-2xl"
+          onclick="closeCalendar()"
+        >
+          <img src="Images/Svg/arrow-left.svg" alt="back" class="w-4 h-4" />
+        </div>
+        <p class="text-2xl font-bold">Calendar</p>
+        <span class="w-10"></span>
+      </div>
+      <div id="calendar-main" class="w-full h-full p-11">
+        <div class="w-full h-10 flex justify-evenly items-center">
+          <img src="Images/Svg/left.svg" alt="left" class="w-2.5" />
+          <span class="text-xl font-bold text-[#616161]">February 2025</span>
+          <img src="Images/Svg/right.svg" alt="right" class="w-2.5" />
+        </div>
+        <div id="datePicker" class="flex flex-col mt-8">
+          <div id="days" class="w-full flex justify-between font-bold text-lg">
+            <span class="w-10 text-center">Sun</span>
+            <span class="w-10 text-center">Mon</span>
+            <span class="w-10 text-center">Tue</span>
+            <span class="w-10 text-center">Wed</span>
+            <span class="w-10 text-center">Thu</span>
+            <span class="w-10 text-center">Fri</span>
+            <span class="w-10 text-center">Sat</span>
+          </div>
+          <div id="dates" class="grid grid-cols-7 gap-2">
+            <button class="w-10 h-10 mt-2">1</button>
+            <button class="w-10 h-10 mt-2">2</button>
+            <button class="w-10 h-10 mt-2">3</button>
+            <button class="w-10 h-10 mt-2">4</button>
+            <button class="w-10 h-10 mt-2">5</button>
+            <button class="w-10 h-10 mt-2">6</button>
+            <button class="w-10 h-10 mt-2">7</button>
+            <button class="w-10 h-10 mt-2">8</button>
+            <button class="w-10 h-10 mt-2">9</button>
+            <button class="w-10 h-10 mt-2">10</button>
+            <button class="w-10 h-10 mt-2">11</button>
+            <button class="w-10 h-10 mt-2">12</button>
+            <button class="w-10 h-10 mt-2">13</button>
+            <button class="w-10 h-10 mt-2">14</button>
+            <button class="w-10 h-10 mt-2">15</button>
+            <button class="w-10 h-10 mt-2">16</button>
+            <button class="w-10 h-10 mt-2">17</button>
+            <button class="w-10 h-10 mt-2">18</button>
+            <button class="w-10 h-10 mt-2">19</button>
+            <button class="w-10 h-10 mt-2">20</button>
+            <button class="w-10 h-10 mt-2">21</button>
+            <button class="w-10 h-10 mt-2">22</button>
+            <button class="w-10 h-10 mt-2">23</button>
+            <button class="w-10 h-10 mt-2">24</button>
+            <button class="w-10 h-10 mt-2 bg-teal-600 rounded-full">25</button>
+            <button class="w-10 h-10 mt-2">26</button>
+            <button class="w-10 h-10 mt-2">27</button>
+            <button class="w-10 h-10 mt-2">28</button>
+            <button class="w-10 h-10 mt-2">29</button>
+            <button class="w-10 h-10 mt-2">30</button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script src="Js/app.js"></script>
