@@ -104,12 +104,16 @@ menuButton.addEventListener("click", () => {
 
 function openMenu() {
   menu.style.bottom = "0";
+  menu.style.height = "fit-content";
   menu.style.opacity = 1;
+  menu.style.visibility = "visible";
 }
 
 function closeMenu() {
   menu.style.opacity = 0;
+  menu.style.height = "0";
   menu.style.bottom = "-40%";
+  menu.style.visibility = "hidden";
 }
 
 // Clear DOM Tasks //
@@ -139,22 +143,24 @@ function readNotificationMode(el) {
   let message = el.children[1];
 
   if (message.style.opacity == 0) {
-    openReadMode(icon, message);
+    openReadMode(el, icon, message);
   } else {
-    closeReadMode(icon, message);
+    closeReadMode(el, icon, message);
   }
 }
 
-function openReadMode(icon, message) {
+function openReadMode(el, icon, message) {
+  el.style.height = "fit-content";
   icon.style.transform = "rotate(180deg)";
   message.style.opacity = 1;
-  message.classList.remove("hidden");
+  message.style.visibility = "visible";
 }
 
-function closeReadMode(icon, message) {
+function closeReadMode(el, icon, message) {
+  el.style.height = "64px";
   icon.style.transform = "rotate(0deg)";
   message.style.opacity = 0;
-  message.classList.add("hidden");
+  message.style.visibility = "hidden";
 }
 
 // Window //
