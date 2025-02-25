@@ -945,6 +945,9 @@
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
+  .w-5\.5 {
+    width: calc(var(--spacing) * 5.5);
+  }
   .w-6 {
     width: calc(var(--spacing) * 6);
   }
