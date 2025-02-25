@@ -107,7 +107,7 @@
             src="Images/Svg/notification.svg"
             alt="notification-icon"
             id="notification-icon"
-            class="w-5"
+            class="w-4"
           />
           <span
             class="absolute top-0 right-0 bg-red-800 w-1.5 h-1.5 rounded-full"
@@ -118,6 +118,7 @@
           alt="calendar-icon"
           id="calendar-icon"
           class="w-5"
+          onclick="openCalendar()"
         />
       </div>
       <div
@@ -306,7 +307,7 @@
     <!------------- Calendar ------------->
     <section
       id="calendar"
-      class="bg-white fixed top-0 left-0 w-full h-full z-50"
+      class="bg-white fixed top-0 left-0 w-full h-full z-50 hidden"
     >
       <div
         id="calendar-header"

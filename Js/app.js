@@ -16,6 +16,8 @@ const menu = document.getElementById("menu");
 const notificationBox = document.getElementById("notification-box");
 const leftIcon = document.getElementById("left-icon");
 
+const calendar = document.getElementById("calendar");
+
 // Variables //
 
 let tasks = [];
@@ -161,6 +163,16 @@ function closeReadMode(el, icon, message) {
   icon.style.transform = "rotate(0deg)";
   message.style.opacity = 0;
   message.style.visibility = "hidden";
+}
+
+// Calendar //
+
+function openCalendar() {
+  calendar.classList.remove("hidden");
+}
+
+function closeCalendar() {
+  calendar.classList.add("hidden");
 }
 
 // Window //
