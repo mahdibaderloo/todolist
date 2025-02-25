@@ -139,9 +139,10 @@
       >
         <img
           src="Images/Svg/profile.svg"
-          alt="profile"
-          id="profile"
+          alt="profile-icon"
+          id="profile-icon"
           class="w-5"
+          onclick="openProfile()"
         />
         <img src="Images/Svg/home.svg" alt="home" id="home" class="w-5" />
       </div>
@@ -183,7 +184,7 @@
       <!------------ Main Popup -------------->
       <div id="popup-main" class="w-full max-[200vh] p-12 bg-white">
         <div id="task-name-box">
-          <p id="task-name-title" class="text-2xl font-bold">Task name:</p>
+          <p id="task-name-title" class="text-xl font-bold">Task name:</p>
           <input
             type="text"
             placeholder="Title"
@@ -192,7 +193,7 @@
           />
         </div>
         <div id="date-box" class="mt-10">
-          <p id="date-title" class="text-2xl font-bold">Date:</p>
+          <p id="date-title" class="text-xl font-bold">Date:</p>
           <div
             id="dat-input-box"
             class="w-full h-15 flex p-2.5 border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"
@@ -209,7 +210,7 @@
         </div>
         <div id="start-end-time-box" class="flex justify-between mt-10">
           <div id="start-time-box" class="">
-            <p id="start-time-title" class="text-2xl font-bold">Start Time:</p>
+            <p id="start-time-title" class="text-xl font-bold">Start Time:</p>
             <input
               type="text"
               id="start-time-input"
@@ -217,7 +218,7 @@
             />
           </div>
           <div id="end-time-box" class="flex flex-col items-end">
-            <p id="end-time-title" class="text-2xl font-bold">End time:</p>
+            <p id="end-time-title" class="text-xl font-bold">End time:</p>
             <input
               type="text"
               id="end-time-input"
@@ -226,7 +227,7 @@
           </div>
         </div>
         <div id="description-box" class="mt-10">
-          <p id="description-title" class="text-2xl font-bold">Description:</p>
+          <p id="description-title" class="text-xl font-bold">Description:</p>
           <textarea
             maxlength="100"
             placeholder="100 Characters"
@@ -237,7 +238,7 @@
         </div>
         <button
           id="submit-task"
-          class="w-full h-15 bg-teal-600 flex justify-center items-center text-2xl text-white font-bold shadow-[0_3px_6px_1px_rgba(0,0,0,0.25)] rounded-xl mt-10"
+          class="w-full h-15 bg-teal-600 flex justify-center items-center text-xl text-white font-bold shadow-[0_3px_6px_1px_rgba(0,0,0,0.25)] rounded-xl mt-10"
         >
           Create Task
         </button>
@@ -373,7 +374,67 @@
         </div>
       </div>
     </section>
+    <!------------- Profile ------------->
+    <section
+      id="profile"
+      class="w-full h-full fixed top-0 left-0 bg-white z-50"
+    >
+      <div
+        id="profile-header"
+        class="w-full h-26.5 flex justify-between items-center pl-8 pr-8"
+      >
+        <div
+          class="w-10 h-10 flex justify-center items-center bg-(--gray-background) rounded-2xl"
+          onclick="closeProfile()"
+        >
+          <img src="Images/Svg/arrow-left.svg" alt="back" class="w-4 h-4" />
+        </div>
+        <p class="text-2xl font-bold">Profile</p>
+        <span class="w-10"></span>
+      </div>
+      <div id="profile-main" class="flex flex-col gap-24 p-7">
+        <div class="flex items-center gap-4">
+          <img
+            src=""
+            alt=""
+            class="w-16 h-16 rounded-full bg-(--gray-background)"
+          />
+          <div>
+            <p class="font-bold">Username</p>
+            <p class="text-[#616161] text-sm">Click to login</p>
+          </div>
+        </div>
+        <div class="flex flex-col p-2.5 gap-12">
+          <p class="font-bold pl-5">Tasks Overview</p>
+          <div class="flex justify-around items-center">
+            <div
+              class="w-[45%] flex flex-col justify-end items-center bg-(--gray-background) rounded-xl p-5 gap-3"
+            >
+              <p class="text-5xl font-bold">4</p>
+              <p>Completed task</p>
+            </div>
+            <div
+              class="w-[45%] flex flex-col justify-end items-center bg-(--gray-background) rounded-xl p-5 gap-3"
+            >
+              <p class="text-5xl font-bold">2</p>
+              <p>Pending task</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="flex gap-4 pl-1">
+            <img src="Images/Svg/pencil.svg" alt="edit" />
+            <p class="font-bold text-lg">Edit profile</p>
+          </div>
+          <div class="flex gap-4">
+            <img src="Images/Svg/logout.svg" alt="logout" />
+            <p class="font-bold text-lg">Logout</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!------------- Scripts ------------->
     <script src="Js/app.js"></script>
   </body>
 </html>
