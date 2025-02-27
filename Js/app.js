@@ -14,7 +14,6 @@ const menuButton = document.getElementById("menu-icon-box");
 const menu = document.getElementById("menu");
 
 const notificationBox = document.getElementById("notification-box");
-const leftIcon = document.getElementById("left-icon");
 
 const calendar = document.getElementById("calendar");
 
@@ -133,10 +132,6 @@ function openNotification() {
   notificationBox.style.left = "0";
 }
 
-leftIcon.addEventListener("click", () => {
-  closeNotification();
-});
-
 function closeNotification() {
   notificationBox.style.left = "-110%";
   notificationBox.style.opacity = 0;
@@ -154,7 +149,8 @@ function readNotificationMode(el) {
 }
 
 function openReadMode(el, icon, message) {
-  el.style.height = "fit-content";
+  console.log(message.width);
+  el.style.height = "150px";
   icon.style.transform = "rotate(180deg)";
   message.style.opacity = 1;
   message.style.visibility = "visible";
@@ -185,6 +181,16 @@ function openProfile() {
 
 function closeProfile() {
   profile.classList.add("hidden");
+}
+
+// Dark Mode //
+
+function darkAndLightMode(el) {
+  let switchToLight = el.children[0];
+  let switchToDark = el.children[1];
+  let html = document.getElementsByTagName("html")[0];
+
+  html.classList.toggle("dark");
 }
 
 // Window //

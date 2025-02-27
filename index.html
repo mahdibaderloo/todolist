@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
+    <link rel="shortcut icon" href="Images/Svg/tick.svg" type="image/x-icon" />
     <link rel="stylesheet" href="Styles/app.css" />
   </head>
   <body>
@@ -17,43 +18,67 @@
         >
           <div
             id="mode-box"
-            class="w-10 h-10 flex justify-center items-center bg-(--gray-background) rounded-2xl"
+            class="w-10 h-10 flex justify-center items-center bg-(--gray-background) dark:bg-(--dark-color) rounded-2xl"
+            onclick="darkAndLightMode(this)"
           >
             <img
               id="dark-icon"
               src="Images/Svg/dark-mode.svg"
               alt="dark-logo"
-              class="w-5"
+              class="w-5 dark:hidden"
             />
             <img
               id="light-icon"
               src="Images/Svg/light-mode.svg"
               alt="light-logo"
-              class="hidden w-5"
+              class="hidden w-7 dark:block"
             />
           </div>
-          <img id="Brand-name" src="Images/Svg/TodoList.svg" class="w-40" />
+          <img
+            id="Brand-name"
+            src="Images/Svg/TodoList.svg"
+            class="w-40 dark:hidden"
+          />
+          <img
+            id="Brand-name"
+            src="Images/Svg/Todolist-dark.svg"
+            class="w-40 hidden dark:block"
+          />
           <div
             id="menu-icon-box"
-            class="w-10 h-10 flex justify-center items-center bg-(--gray-background) rounded-2xl"
+            class="w-10 h-10 flex justify-center items-center bg-(--gray-background) dark:bg-(--dark-color) rounded-2xl"
           >
             <img
               id="menu-icon"
               src="Images/Svg/menu.svg"
               alt="menu"
-              class="w-5"
+              class="w-5 dark:hidden"
+            />
+            <img
+              id="menu-icon"
+              src="Images/Svg/menu-dark.svg"
+              alt="menu"
+              class="w-5 hidden dark:block"
             />
           </div>
         </div>
       </header>
       <!---------------- Main ---------------->
-      <main id="main" class="w-full h-screen flex flex-col justify-between">
+      <main
+        id="main"
+        class="w-full h-screen flex flex-col justify-between dark:bg-(--dark-color)"
+      >
         <!----------- Tasks Section ------------>
         <section
           id="tasks-section"
           class="w-full h-[90%] px-5 flex flex-col justify-start items-center gap-4 mt-10"
         >
-          <p id="tasks-title" class="text-2xl font-bold w-full ml-7">Tasks</p>
+          <p
+            id="tasks-title"
+            class="text-2xl font-bold w-full ml-7 dark:text-white"
+          >
+            Tasks
+          </p>
           <!----------- Tasks Wrapper ------------->
           <ul
             id="tasks-wrapper"
@@ -61,7 +86,7 @@
           >
             <li
               id="task-box"
-              class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] pl-4 pr-4 pt-1 pb-1"
+              class="w-full flex items-center rounded-xl shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] dark:shadow-[2px_2px_10px_1px_#FFFFFF26] pl-4 pr-4 pt-1 pb-1"
             >
               <div
                 id="done"
@@ -70,12 +95,18 @@
                 <img src="Images/Svg/tick.svg" alt="" id="tick-icon" class="" />
               </div>
               <div id="task-information" class="flex flex-col gap-0.5 ml-4">
-                <p id="task-title" class="font-bold">Title</p>
+                <p id="task-title" class="font-bold dark:text-white">Title</p>
                 <div id="time-box">
-                  <p id="task-time" class="text-[14px] opacity-60">
+                  <p
+                    id="task-time"
+                    class="text-[14px] dark:text-white opacity-60"
+                  >
                     9:00 - 23:00
                   </p>
-                  <p id="task-date" class="text-[14px] opacity-60">
+                  <p
+                    id="task-date"
+                    class="text-[14px] dark:text-white opacity-60"
+                  >
                     16 April, Friday
                   </p>
                 </div>
@@ -84,7 +115,13 @@
                 src="Images/Svg/arrow-right.svg"
                 alt=""
                 id="task-setting-icon"
-                class="ml-auto mr-3 w-2"
+                class="ml-auto mr-3 w-2 fill-[#A9ABAD] dark:hidden"
+              />
+              <img
+                src="Images/Svg/arrow-right-dark.svg"
+                alt=""
+                id="task-setting-icon"
+                class="ml-auto mr-3 w-2 hidden dark:block"
               />
             </li>
           </ul>
@@ -95,7 +132,7 @@
     <!------------- Navbar ------------->
     <section
       id="navbar"
-      class="w-full h-14 bg-white shadow-[0px_2px_11.4px_0px_rgba(0,137,123,1)] flex justify-between fixed bottom-0"
+      class="w-full h-14 bg-white dark:bg-(--dark-color) shadow-[0px_2px_11.4px_0px_rgba(0,137,123,1)] flex justify-between fixed bottom-0"
     >
       <!--------- Navbar Left  ----------->
       <div
@@ -107,17 +144,30 @@
             src="Images/Svg/notification.svg"
             alt="notification-icon"
             id="notification-icon"
-            class="w-5"
+            class="w-5 dark:hidden"
+          />
+          <img
+            src="Images/Svg/notification-dark.svg"
+            alt="notification-icon"
+            id="notification-icon"
+            class="w-5 hidden dark:block"
           />
           <span
-            class="absolute top-0 right-0 bg-red-800 w-1.5 h-1.5 rounded-full"
+            class="absolute top-0 right-0 bg-[#FF0000] w-1.5 h-1.5 rounded-full"
           ></span>
         </div>
         <img
           src="Images/Svg/calendar.svg"
           alt="calendar-icon"
           id="calendar-icon"
-          class="w-6"
+          class="w-6 dark:hidden"
+          onclick="openCalendar()"
+        />
+        <img
+          src="Images/Svg/calendar-dark.svg"
+          alt="calendar-icon"
+          id="calendar-icon"
+          class="w-6 hidden dark:block"
           onclick="openCalendar()"
         />
       </div>
@@ -129,7 +179,13 @@
           src="Images/Svg/plus.svg"
           alt=""
           id="create-task-icon"
-          class="w-5 h-5"
+          class="w-5 h-5 dark:hidden"
+        />
+        <img
+          src="Images/Svg/plus-dark.svg"
+          alt=""
+          id="create-task-icon"
+          class="w-5 h-5 hidden dark:block"
         />
       </div>
       <!--------- Navbar Right ----------->
@@ -140,18 +196,28 @@
         <img
           src="Images/Svg/profile.svg"
           alt="profile-icon"
-          id="profile-icon"
-          class="w-6"
+          class="w-6 dark:hidden"
           onclick="openProfile()"
         />
-        <img src="Images/Svg/home.svg" alt="home" id="home" class="w-6" />
+        <img
+          src="Images/Svg/profile-dark.svg"
+          alt="profile-icon"
+          class="w-6 hidden dark:block"
+          onclick="openProfile()"
+        />
+        <img src="Images/Svg/home.svg" alt="home" class="w-6 dark:hidden" />
+        <img
+          src="Images/Svg/home-dark.svg"
+          alt="home"
+          class="w-7 hidden dark:block"
+        />
       </div>
     </section>
 
     <!------------- Task Popup ------------->
     <section
       id="task-popup"
-      class="hidden w-full h-full fixed left-0 top-0 bottom-0 z-50 bg-white overflow-y-scroll"
+      class="hidden w-full h-full fixed left-0 top-0 bottom-0 z-50 bg-white dark:bg-(--dark-color) overflow-y-scroll"
     >
       <!----------- Header Popup ------------->
       <div
@@ -164,76 +230,96 @@
         >
           <div
             id="popup-back-button"
-            class="w-10 h-10 flex justify-center items-center bg-(--gray-background) rounded-2xl"
+            class="w-10 h-10 flex justify-center items-center bg-(--gray-background) dark:bg-(--dark-color) rounded-2xl"
           >
             <img
-              id="popup-back-icon"
               src="Images/Svg/arrow-left.svg"
               alt="back"
-              class="w-4 h-4"
+              class="w-3 dark:hidden"
+            />
+            <img
+              src="Images/Svg/arrow-left-dark.svg"
+              alt="back"
+              class="w-3 hidden dark:block"
             />
           </div>
+          <img src="Images/Svg/CreateNewTask.svg" class="w-56 dark:hidden" />
           <img
-            src="Images/Svg/CreateNewTask.svg"
-            id="popup-title"
-            class="w-56"
+            src="Images/Svg/CreateNewTask-dark.svg"
+            class="w-56 hidden dark:block"
           />
           <span class="w-10"></span>
         </div>
       </div>
       <!------------ Main Popup -------------->
-      <div id="popup-main" class="w-full max-[200vh] p-12 bg-white">
+      <div
+        id="popup-main"
+        class="w-full max-[200vh] p-12 bg-white dark:bg-(--dark-color)"
+      >
         <div id="task-name-box">
-          <p id="task-name-title" class="text-xl font-bold">Task name:</p>
+          <p id="task-name-title" class="text-xl font-bold dark:text-white">
+            Task name:
+          </p>
           <input
             type="text"
             placeholder="Title"
             id="task-name-input"
-            class="w-full h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"
+            class="w-full h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl dark:text-[#FFFFFF80]"
           />
         </div>
         <div id="date-box" class="mt-10">
-          <p id="date-title" class="text-xl font-bold">Date:</p>
+          <p id="date-title" class="text-xl font-bold dark:text-white">Date:</p>
           <div
             id="dat-input-box"
-            class="w-full h-15 flex p-2.5 border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"
+            class="w-full h-15 flex p-2.5 border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl dark:text-[#FFFFFF80]"
           >
             <input
               type="text"
               readonly
               placeholder="16 April, Friday"
               id="date-input"
-              class="w-full h-full outline-none border-none text-lg"
+              class="w-full h-full outline-none border-none text-lg dark:text-[#FFFFFF80]"
             />
-            <img src="Images/Svg/calendar.svg" alt="" class="w-6" />
+            <img src="Images/Svg/calendar.svg" alt="" class="w-6 dark:hidden" />
+            <img
+              src="Images/Svg/calendar-dark.svg"
+              alt=""
+              class="w-6 hidden dark:block"
+            />
           </div>
         </div>
         <div id="start-end-time-box" class="flex justify-between mt-10">
           <div id="start-time-box" class="">
-            <p id="start-time-title" class="text-xl font-bold">Start Time:</p>
+            <p id="start-time-title" class="text-xl font-bold dark:text-white">
+              Start Time:
+            </p>
             <input
               type="text"
               id="start-time-input"
-              class="w-[90%] h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"
+              class="w-[90%] h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl dark:text-[#FFFFFF80]"
             />
           </div>
           <div id="end-time-box" class="flex flex-col items-end">
-            <p id="end-time-title" class="text-xl font-bold">End time:</p>
+            <p id="end-time-title" class="text-xl font-bold dark:text-white">
+              End time:
+            </p>
             <input
               type="text"
               id="end-time-input"
-              class="w-[90%] h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"
+              class="w-[90%] h-15 pl-2.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl dark:text-[#FFFFFF80]"
             />
           </div>
         </div>
         <div id="description-box" class="mt-10">
-          <p id="description-title" class="text-xl font-bold">Description:</p>
+          <p id="description-title" class="text-xl font-bold dark:text-white">
+            Description:
+          </p>
           <textarea
             maxlength="100"
             placeholder="100 Characters"
             name=""
             id="description-input"
-            class="w-full h-30 bg pl-2.5 pt-0.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl"
+            class="w-full h-30 bg pl-2.5 pt-0.5 outline-none border border-[rgba(0,0,0,0.6)] text-lg mt-4 rounded-xl dark:text-[#FFFFFF80]"
           ></textarea>
         </div>
         <button
@@ -247,58 +333,73 @@
     <!------------- Menu ------------->
     <ul
       id="menu"
-      class="w-full rounded-t-2xl font-bold bg-white shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] flex flex-col gap-5 p-12 fixed transition-discrete ease-in duration-400 z-50 h-0 invisible opacity-0"
+      class="w-full rounded-t-2xl font-bold bg-white dark:bg-(--dark-color) shadow-[2px_2px_10px_1px_rgba(0,0,0,0.15)] flex flex-col gap-5 p-12 fixed transition-discrete ease-linear duration-400 z-50 h-0 invisible opacity-0"
     >
-      <li class="border-b border-b-[#7B7B7B80] pb-5">Upgrade to pro</li>
-      <li class="border-b border-b-[#7B7B7B80] pb-5">Settings</li>
-      <li class="border-b border-b-[#7B7B7B80] pb-5">About</li>
-      <li class="mb-5">Help</li>
+      <li class="border-b border-b-[#7B7B7B80] pb-5 dark:text-white">
+        Upgrade to pro
+      </li>
+      <li class="border-b border-b-[#7B7B7B80] pb-5 dark:text-white">
+        Settings
+      </li>
+      <li class="border-b border-b-[#7B7B7B80] pb-5 dark:text-white">About</li>
+      <li class="mb-5 dark:text-white">Help</li>
     </ul>
     <!------------- Notification ------------->
     <section
       id="notification-box"
-      class="w-full h-full absolute left-[-110%] top-0 bottom-0 opacity-0 transition-all duration-400 z-50"
+      class="w-full h-full absolute left-[-110%] top-0 bottom-0 opacity-0 transition-all ease-linear duration-500 z-50"
     >
       <div
         id="notification-header"
         class="w-full h-26.5 bg-teal-600 flex justify-around items-center"
       >
         <span class="w-10"></span>
+        <img src="Images/Svg/notification-text.svg" class="w-40 dark:hidden" />
         <img
-          id="notification-header-title"
-          src="Images/Svg/notification-text.svg"
-          class="w-40"
+          src="Images/Svg/notification-text-dark.svg"
+          class="w-40 hidden dark:block"
         />
         <div
           id="back-icon-box"
-          class="w-10 h-10 flex justify-center items-center bg-(--gray-background) rounded-2xl"
+          class="w-10 h-10 flex justify-center items-center bg-(--gray-background) dark:bg-(--dark-color) rounded-2xl"
         >
           <img
-            id="left-icon"
             src="Images/Svg/arrow-left.svg"
             alt="left"
-            class="w-3"
+            class="w-3 dark:hidden"
+            onclick="closeNotification()"
+          />
+          <img
+            src="Images/Svg/arrow-left-dark.svg"
+            alt="left"
+            class="w-3 hidden dark:block"
+            onclick="closeNotification()"
           />
         </div>
       </div>
       <ul
         id="notification-main"
-        class="bg-white w-full h-full pr-10 pl-10 pt-8"
+        class="bg-white dark:bg-(--dark-color) w-full h-full pr-10 pl-10 pt-8"
       >
         <li
-          class="h-16 flex flex-col justify-between items-center p-4 border border-[#00000066] rounded-xl transition-all duration-300"
+          class="h-16 flex flex-col justify-between items-center p-4 border border-[#00000066] dark:border-(--gray-background) rounded-xl transition-all ease-in duration-400"
           onclick="readNotificationMode(this)"
         >
           <div class="w-full flex justify-between items-center gap-2">
-            <p class="font-bold text-xl">Title</p>
+            <p class="font-bold text-xl dark:text-white">Title</p>
             <img
               src="Images/Svg/arrow-down.svg"
               alt="arrow"
-              class="w-3 h-2 transition-all duration-300"
+              class="w-3 h-2 transition-all ease-in-out duration-400 dark:hidden"
+            />
+            <img
+              src="Images/Svg/arrow-down-dark.svg"
+              alt="arrow"
+              class="w-3 h-2 transition-all ease-in-out duration-400 hidden dark:block"
             />
           </div>
           <span
-            class="opacity-0 invisible transition-discrete ease-in duration-200"
+            class="opacity-0 invisible transition-discrete ease-in-out duration-300 dark:text-(--gray-background)"
             >Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Voluptates, est!</span
           >
@@ -308,29 +409,57 @@
     <!------------- Calendar ------------->
     <section
       id="calendar"
-      class="bg-white fixed top-0 left-0 w-full h-full z-50 hidden"
+      class="bg-white dark:bg-(--dark-color) fixed top-0 left-0 w-full h-full z-50 hidden"
     >
       <div
         id="calendar-header"
         class="w-full h-26.5 flex justify-between items-center pl-8 pr-8"
       >
         <div
-          class="w-10 h-10 flex justify-center items-center bg-(--gray-background) rounded-2xl"
+          class="w-10 h-10 flex justify-center items-center bg-(--gray-background) dark:bg-[#FFFFFF1A] rounded-2xl"
           onclick="closeCalendar()"
         >
-          <img src="Images/Svg/arrow-left.svg" alt="back" class="w-4 h-4" />
+          <img
+            src="Images/Svg/arrow-left.svg"
+            alt="back"
+            class="w-4 h-4 dark:hidden"
+          />
+          <img
+            src="Images/Svg/arrow-left-dark.svg"
+            alt="back"
+            class="w-4 h-4 hidden dark:block"
+          />
         </div>
-        <p class="text-3xl font-bold">Calendar</p>
+        <p class="text-3xl font-bold dark:text-white">Calendar</p>
         <span class="w-10"></span>
       </div>
       <div id="calendar-main" class="w-full h-full p-11">
         <div class="w-full h-10 flex justify-evenly items-center">
-          <img src="Images/Svg/left.svg" alt="left" class="w-2.5" />
-          <span class="text-xl font-bold text-[#616161]">February 2025</span>
-          <img src="Images/Svg/right.svg" alt="right" class="w-2.5" />
+          <img src="Images/Svg/left.svg" alt="left" class="w-2.5 dark:hidden" />
+          <img
+            src="Images/Svg/left-dark.svg"
+            alt="left"
+            class="w-2.5 hidden dark:block"
+          />
+          <span class="font-light text-2xl text-[#616161] dark:text-white"
+            >February 2025</span
+          >
+          <img
+            src="Images/Svg/right.svg"
+            alt="right"
+            class="w-2.5 dark:hidden"
+          />
+          <img
+            src="Images/Svg/right-dark.svg"
+            alt="right"
+            class="w-2.5 hidden dark:block"
+          />
         </div>
         <div id="datePicker" class="flex flex-col mt-8">
-          <div id="days" class="w-full flex justify-between font-bold text-lg">
+          <div
+            id="days"
+            class="w-full flex justify-between font-bold text-lg dark:text-white"
+          >
             <span class="w-10 text-center">Sun</span>
             <span class="w-10 text-center">Mon</span>
             <span class="w-10 text-center">Tue</span>
@@ -339,7 +468,10 @@
             <span class="w-10 text-center">Fri</span>
             <span class="w-10 text-center">Sat</span>
           </div>
-          <div id="dates" class="grid grid-cols-7 gap-2">
+          <div
+            id="dates"
+            class="grid grid-cols-7 gap-2 font-light dark:text-white"
+          >
             <button class="w-10 h-10 mt-2">1</button>
             <button class="w-10 h-10 mt-2">2</button>
             <button class="w-10 h-10 mt-2">3</button>
@@ -377,19 +509,28 @@
     <!------------- Profile ------------->
     <section
       id="profile"
-      class="w-full h-full fixed top-0 left-0 bg-white z-50 overflow-y-scroll hidden"
+      class="w-full h-full fixed top-0 left-0 bg-white dark:bg-(--dark-color) z-50 overflow-y-scroll hidden"
     >
       <div
         id="profile-header"
         class="w-full h-26.5 flex justify-between items-center pl-8 pr-8"
       >
         <div
-          class="w-10 h-10 flex justify-center items-center bg-(--gray-background) rounded-2xl"
+          class="w-10 h-10 flex justify-center items-center bg-(--gray-background) dark:bg-[#FFFFFF1A] rounded-2xl"
           onclick="closeProfile()"
         >
-          <img src="Images/Svg/arrow-left.svg" alt="back" class="w-4 h-4" />
+          <img
+            src="Images/Svg/arrow-left.svg"
+            alt="back"
+            class="w-4 h-4 dark:hidden"
+          />
+          <img
+            src="Images/Svg/arrow-left-dark.svg"
+            alt="back"
+            class="w-4 h-4 hidden dark:block"
+          />
         </div>
-        <p class="text-3xl font-bold">Profile</p>
+        <p class="text-3xl font-bold dark:text-white">Profile</p>
         <span class="w-10"></span>
       </div>
       <div id="profile-main" class="flex flex-col gap-20 p-7">
@@ -400,31 +541,38 @@
             class="w-18 h-18 rounded-full bg-(--gray-background)"
           />
           <div>
-            <p class="font-bold text-xl">Username</p>
-            <p class="text-[#616161] text-sm">Click to login</p>
+            <p class="font-bold text-xl dark:text-white">Username</p>
+            <p class="text-[#616161] dark:text-[#FFFFFF80] text-sm">
+              Click to login
+            </p>
           </div>
         </div>
-        <div class="flex flex-col p-2.5 gap-8">
-          <p class="font-bold text-xl">Tasks Overview</p>
+        <div class="flex flex-col p-2.5 gap-10">
+          <p class="font-bold text-xl dark:text-white">Tasks Overview</p>
           <div class="flex justify-around items-center">
             <div
-              class="w-[48%] flex flex-col justify-end items-center bg-(--gray-background) rounded-xl p-5 gap-3"
+              class="w-[40%] flex flex-col justify-end items-center bg-(--gray-background) rounded-xl p-3 gap-4"
             >
-              <p class="text-4xl font-bold">4</p>
+              <p class="text-5xl font-bold">4</p>
               <p class="text-sm">Completed task</p>
             </div>
             <div
-              class="w-[48%] flex flex-col justify-end items-center bg-(--gray-background) rounded-xl p-5 gap-3"
+              class="w-[40%] flex flex-col justify-end items-center bg-(--gray-background) rounded-xl p-3 gap-4"
             >
-              <p class="text-4xl font-bold">2</p>
+              <p class="text-5xl font-bold">2</p>
               <p class="text-sm">Pending task</p>
             </div>
           </div>
         </div>
         <div class="flex flex-col gap-4">
           <div class="flex items-center gap-4 pl-1">
-            <img src="Images/Svg/pencil.svg" alt="edit" />
-            <p class="font-bold text-lg">Edit profile</p>
+            <img src="Images/Svg/pencil.svg" alt="edit" class="dark:hidden" />
+            <img
+              src="Images/Svg/pencil-dark.svg"
+              alt="edit"
+              class="hidden dark:block"
+            />
+            <p class="font-bold text-lg dark:text-white">Edit profile</p>
           </div>
           <div class="flex items-center gap-4">
             <img src="Images/Svg/logout.svg" alt="logout" />
