@@ -874,6 +874,9 @@
   .h-18 {
     height: calc(var(--spacing) * 18);
   }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
   .h-26 {
     height: calc(var(--spacing) * 26);
   }
@@ -946,6 +949,9 @@
   .w-18 {
     width: calc(var(--spacing) * 18);
   }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
   .w-40 {
     width: calc(var(--spacing) * 40);
   }
@@ -957,6 +963,9 @@
   }
   .w-\[80\%\] {
     width: 80%;
+  }
+  .w-\[85\%\] {
+    width: 85%;
   }
   .w-\[90\%\] {
     width: 90%;
@@ -2107,6 +2116,9 @@
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
   }
+  .text-\[\#00000080\] {
+    color: #00000080;
+  }
   .text-\[\#616161\] {
     color: #616161;
   }
@@ -2266,6 +2278,9 @@
   }
   .opacity-0 {
     opacity: 0%;
+  }
+  .opacity-50 {
+    opacity: 50%;
   }
   .opacity-60 {
     opacity: 60%;

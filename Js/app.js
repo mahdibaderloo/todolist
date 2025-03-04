@@ -20,6 +20,12 @@ const calendar = document.getElementById("calendar");
 const profile = document.getElementById("profile");
 
 const loginPage = document.getElementById("login");
+const loginTitle = document.getElementById("login-title");
+const loginLabel = document.getElementById("login-label");
+const emailInput = document.getElementById("email-input");
+const loginBtn = document.getElementById("login-btn");
+const haveAccount = document.getElementById("have-account");
+const loginLink = document.getElementById("login-link");
 
 // Variables //
 
@@ -199,10 +205,34 @@ function darkAndLightMode(el) {
 
 function openLoginPage() {
   loginPage.classList.remove("hidden");
+  loginPage.classList.add("flex");
 }
 
 function closeLoginPage() {
   loginPage.classList.add("hidden");
+  loginPage.classList.remove("flex");
+}
+
+// Sign Up //
+
+function signUp() {
+  if (loginLabel.classList.contains("hidden")) {
+    loginTitle.innerHTML = "Sign up";
+    loginLabel.classList.remove("hidden");
+    loginLabel.classList.add("flex");
+    emailInput.classList.remove("hidden");
+    loginBtn.innerHTML = "Sign up";
+    haveAccount.innerHTML = "Do you have an account?";
+    loginLink.innerHTML = "Login";
+  } else {
+    loginTitle.innerHTML = "Login";
+    loginLabel.classList.add("hidden");
+    loginLabel.classList.remove("flex");
+    emailInput.classList.add("hidden");
+    loginBtn.innerHTML = "Login";
+    haveAccount.innerHTML = "Don’t have an account?";
+    loginLink.innerHTML = "Sign up";
+  }
 }
 
 // Window //
