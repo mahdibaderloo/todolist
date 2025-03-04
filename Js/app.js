@@ -149,39 +149,40 @@ function clearDom() {
 // Notification //
 
 function openNotification() {
-  notificationBox.style.opacity = 1;
   notificationBox.style.left = "0";
 }
 
 function closeNotification() {
   notificationBox.style.left = "-110%";
-  notificationBox.style.opacity = 0;
 }
 
 function readNotificationMode(el) {
   let icon = el.children[0].children[1];
+  let icon2 = el.children[0].children[2];
   let message = el.children[1];
 
-  if (message.style.opacity == 0) {
-    openReadMode(el, icon, message);
+  if (
+    icon.style.transform !== "rotate(180deg)" ||
+    icon2.style.transform !== "rotate(180deg)"
+  ) {
+    openReadMode(el, icon, icon2, message);
   } else {
-    closeReadMode(el, icon, message);
+    closeReadMode(el, icon, icon2, message);
   }
 }
 
-function openReadMode(el, icon, message) {
-  console.log(message.width);
+function openReadMode(el, icon, icon2, message) {
   el.style.height = "150px";
   icon.style.transform = "rotate(180deg)";
-  message.style.opacity = 1;
-  message.style.visibility = "visible";
+  icon2.style.transform = "rotate(180deg)";
+  message.style.height = message.scrollHeight + "px";
 }
 
-function closeReadMode(el, icon, message) {
+function closeReadMode(el, icon, icon2, message) {
   el.style.height = "64px";
   icon.style.transform = "rotate(0deg)";
-  message.style.opacity = 0;
-  message.style.visibility = "hidden";
+  icon2.style.transform = "rotate(0deg)";
+  message.style.height = 0;
 }
 
 // Calendar //

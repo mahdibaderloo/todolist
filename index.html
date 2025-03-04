@@ -347,7 +347,7 @@
     <!------------- Notification ------------->
     <section
       id="notification-box"
-      class="w-full h-full absolute left-[-110%] top-0 bottom-0 opacity-0 transition-all ease-linear duration-500 z-50"
+      class="w-full h-full absolute left-[-110%] top-0 bottom-0 transition-all ease-linear duration-500 z-50"
     >
       <div
         id="notification-header"
@@ -390,7 +390,7 @@
             <img
               src="Images/Svg/arrow-down.svg"
               alt="arrow"
-              class="w-3 h-2 transition-all ease-in-out duration-400 dark:hidden"
+              class="w-3 h-2 transition-all ease-in-out duration-400 block dark:hidden"
             />
             <img
               src="Images/Svg/arrow-down-dark.svg"
@@ -398,8 +398,7 @@
               class="w-3 h-2 transition-all ease-in-out duration-400 hidden dark:block"
             />
           </div>
-          <span
-            class="opacity-0 invisible transition-discrete ease-in-out duration-300 dark:text-(--gray-background)"
+          <span class="h-0 overflow-hidden dark:text-(--gray-background)"
             >Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Voluptates, est!</span
           >
