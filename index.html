@@ -581,6 +581,58 @@
         </div>
       </div>
     </section>
+    <!------------- Login ------------->
+    <section
+      id="login"
+      class="w-full h-full fixed top-0 left-0 bg-teal-600 dark:bg-(--dark-color) z-50 overflow-hidden flex justify-center items-center"
+    >
+      <form
+        action="#"
+        class="bg-white w-[80%] p-7 rounded-2xl flex flex-col items-center gap-16"
+      >
+        <div class="w-full flex justify-between items-center">
+          <p class="font-bold text-xl">Login</p>
+          <div
+            class="w-10 h-10 flex justify-center items-center bg-(--gray-background) dark:bg-[#FFFFFF1A] rounded-2xl"
+            onclick="closeLoginPage()"
+          >
+            <img
+              src="Images/Svg/arrow-left.svg"
+              alt="back"
+              class="w-4 h-4 dark:hidden"
+            />
+            <img
+              src="Images/Svg/arrow-left-dark.svg"
+              alt="back"
+              class="w-4 h-4 hidden dark:block"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-5">
+          <input
+            type="text"
+            placeholder="Username"
+            class="w-full bg-(--gray-background) pl-4 py-4 rounded-xl outline-none border-none"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            class="w-full bg-(--gray-background) pl-4 py-4 rounded-xl outline-none border-none"
+          />
+        </div>
+        <div class="flex flex-col items-center gap-6">
+          <button
+            class="w-fit bg-(--gray-background) py-3.5 px-5 rounded-xl font-bold"
+          >
+            Login
+          </button>
+          <div class="flex gap-4 text-xs">
+            <p class="">Don’t have an account?</p>
+            <a href="" class="font-bold underline">Sign up</a>
+          </div>
+        </div>
+      </form>
+    </section>
 
     <!------------- Scripts ------------->
     <script src="Js/app.js"></script>
