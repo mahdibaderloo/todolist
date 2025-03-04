@@ -15,6 +15,7 @@ const menu = document.getElementById("menu");
 const notificationBox = document.getElementById("notification-box");
 
 const calendar = document.getElementById("calendar");
+const dates = document.querySelectorAll("#dates button");
 
 const profile = document.getElementById("profile");
 
@@ -32,6 +33,11 @@ let tasks = [];
 
 // Task Popup //
 
+function createTaskWithDate() {
+  calendar.classList.add("hidden");
+  showTaskPopup();
+}
+
 function showTaskPopup() {
   taskPopup.classList.remove("hidden");
 }
@@ -43,6 +49,18 @@ closePopup.addEventListener("click", () => {
 function hideTaskPopup() {
   taskPopup.classList.add("hidden");
 }
+
+// Select Date //
+
+dates.forEach((date) => {
+  date.addEventListener("click", (e) => {
+    for (let item of dates) {
+      item.classList.remove("bg-teal-600");
+    }
+
+    e.target.classList.add("bg-teal-600");
+  });
+});
 
 // Local Storage //
 
