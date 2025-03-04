@@ -587,14 +587,14 @@
     <!------------- Login ------------->
     <section
       id="login"
-      class="w-full h-full fixed top-0 left-0 bg-teal-600 dark:bg-(--dark-color) z-50 overflow-hidden flex justify-center items-center hidden"
+      class="w-full h-full fixed top-0 left-0 bg-teal-600 z-50 overflow-hidden flex justify-center items-center hidden"
     >
       <form
         action="#"
-        class="bg-white w-[80%] p-7 rounded-2xl flex flex-col items-center gap-16"
+        class="bg-white dark:bg-(--dark-color) w-[80%] p-7 rounded-2xl flex flex-col items-center gap-16"
       >
         <div class="w-full flex justify-between items-center">
-          <p class="font-bold text-xl">Login</p>
+          <p class="font-bold text-xl dark:text-white">Login</p>
           <div
             class="w-10 h-10 flex justify-center items-center bg-(--gray-background) dark:bg-[#FFFFFF1A] rounded-2xl"
             onclick="closeLoginPage()"
@@ -629,7 +629,7 @@
           >
             Login
           </button>
-          <div class="flex gap-4 text-xs">
+          <div class="flex items-center gap-4 text-xs dark:text-white">
             <p class="">Don’t have an account?</p>
             <a href="" class="font-bold underline">Sign up</a>
           </div>
