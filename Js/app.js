@@ -1,6 +1,5 @@
 // DOM Elements //
 
-const createTaskButton = document.getElementById("create-task-button");
 const taskPopup = document.getElementById("task-popup");
 const closePopup = document.getElementById("popup-back-button");
 const tasksWrapper = document.getElementById("tasks-wrapper");
@@ -32,10 +31,6 @@ const loginLink = document.getElementById("login-link");
 let tasks = [];
 
 // Task Popup //
-
-createTaskButton.addEventListener("click", () => {
-  showTaskPopup();
-});
 
 function showTaskPopup() {
   taskPopup.classList.remove("hidden");
