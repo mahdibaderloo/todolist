@@ -19,6 +19,8 @@ const calendar = document.getElementById("calendar");
 
 const profile = document.getElementById("profile");
 
+const loginPage = document.getElementById("login");
+
 // Variables //
 
 let tasks = [];
@@ -191,6 +193,16 @@ function darkAndLightMode(el) {
   let html = document.getElementsByTagName("html")[0];
 
   html.classList.toggle("dark");
+}
+
+// Login Page //
+
+function openLoginPage() {
+  loginPage.classList.remove("hidden");
+}
+
+function closeLoginPage() {
+  loginPage.classList.add("hidden");
 }
 
 // Window //

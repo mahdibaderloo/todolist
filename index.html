@@ -542,7 +542,10 @@
           />
           <div>
             <p class="font-bold text-xl dark:text-white">Username</p>
-            <p class="text-[#616161] dark:text-[#FFFFFF80] text-sm">
+            <p
+              class="text-[#616161] dark:text-[#FFFFFF80] text-sm"
+              onclick="openLoginPage()"
+            >
               Click to login
             </p>
           </div>
@@ -584,7 +587,7 @@
     <!------------- Login ------------->
     <section
       id="login"
-      class="w-full h-full fixed top-0 left-0 bg-teal-600 dark:bg-(--dark-color) z-50 overflow-hidden flex justify-center items-center"
+      class="w-full h-full fixed top-0 left-0 bg-teal-600 dark:bg-(--dark-color) z-50 overflow-hidden flex justify-center items-center hidden"
     >
       <form
         action="#"
